@@ -1,0 +1,41 @@
+:- dynamic log_store/4, started/0.
+
+startI :>
+    retractall(started),
+    assert(started),
+    retractall(log_store(_,_,_,_)).
+
+logE(log(Level,Event,Sender)) :>
+    statistics(walltime, [T,_]),
+    assert(log_store(T,Sender,Event,Level)),
+    write('[LOG-'), write(Level), write('] '),
+    write(T), write(' ['),
+    write(Sender), write('] -> '),
+    write(Event), nl.
+
+logE(log(Level,event(Name,req(ReqId),bin(Bin),truck(Truck),note(Note)),Sender)) :>
+    statistics(walltime, [T,_]),
+    assert(log_store(T,Sender,event(Name,req(ReqId),bin(Bin),truck(Truck),note(Note)),Level)),
+    write('[LOG-'), write(Level), write('] '),
+    write(T), write(' ['), write(Sender), write('] '),
+    write(Name), write(' req='), write(ReqId),
+    write(' bin='), write(Bin),
+    write(' truck='), write(Truck),
+    write(' note='), write(Note), nl.
+
+logE(log(error,Event,Sender)) :>
+    write('[ALERT] '), write(Sender),
+    write(' -> '), write(Event), nl.
+
+send_message(inform(log(Level,Event,Sender),_),_From) :-
+    evi(log(Level,Event,Sender)).
+
+send_message(log(Level,Event,Sender),_From) :-
+    evi(log(Level,Event,Sender)).
+
+monitorI(dummy) :>
+    started.
+
+monitorI(dummy) :>
+    \+ started,
+    evi(start).
