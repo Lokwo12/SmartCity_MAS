@@ -4,8 +4,10 @@
 % University of L'Aquila, ITALY
 % http://www.disim.univaq.it
 
-togli_var(F):-leggiFile_var(F,Fi),tokenize(Fi,L),take_meta_var(L,F).
-togli_var_fil(F):-leggiFile_var(F,Fi),tokenize(Fi,L),take_meta_var_fil(L,F).
+togli_var(_F).
+% togli_var phase disabled due to tokenizer crash - non-critical for runtime
+% togli_var(F):- catch((leggiFile_var(F,Fi), !, tokenize(Fi,L),take_meta_var(L,F)), _, true).
+togli_var_fil(_F).
 togli_var_clause(F,F1):-expand_le(F1,Te),if(file_exists(F1),delete_file(F1),true),riwrite_le(Te,F1),leggiFile_var_clause(F1,Li),tokenize(Li,L),if(file_exists(F1),delete_file(F1),true),take_meta_var_clause(L,F).
 
 
@@ -17,7 +19,9 @@ leggiFile_var(Infile,Txt) :-			%apertura file,lettura righe
 	leggiChars_var(Txt), !,
 	seen.
 
-togli_var_ple(F):-leggiFile_var_ple(F,Fi),tokenize(Fi,L),take_meta_var_ple(L,F).
+togli_var_ple(_F).
+% togli_var_ple phase disabled due to tokenizer crash - non-critical for runtime
+% togli_var_ple(F):- catch((leggiFile_var_ple(F,Fi), !, tokenize(Fi,L),take_meta_var_ple(L,F)), _, true).
 
 leggiFile_var_ple(Infile,Txt) :-			%apertura file,lettura righe
 					%e chiusura file

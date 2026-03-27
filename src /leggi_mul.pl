@@ -24,11 +24,14 @@ take_rules1(F):-findall(X,clause(program_rule(X),_),L),
              Me==U,!,
              retractall(program_rule(_)).
 
+examine_program_rule(Me,F):- \+ compound(Me), !.
 examine_program_rule(Me,F):-if(arg(1,Me,Head),examine_program_head(Head,Me,F),true).
 
+examine_program_head(Head,Me,F):- \+ compound(Head), !, scrivi_clause_no_mul(Me,F).
 examine_program_head(Head,Me,F):-functor(Head,Fu,N),
                                if((N>1,not_tell_told(Fu)),testa_multiplo_evento(Head,Me,F),scrivi_clause_no_mul(Me,F)).
 
+testa_multiplo_evento(Head,Me,F):- arg(2,Head,A2), \+ compound(A2), !, scrivi_clause_no_mul(Me,F).
 testa_multiplo_evento(Head,Me,F):-arg(2,Head,A2),functor(A2,Fu,_),if(Fu=eve,testa_multiplo_evento2(Head,Me),
                                 scrivi_clause_no_mul(Me,F)).
 testa_multiplo_evento2(Head,Me):-ejec_mul(Head,Me).
@@ -36,6 +39,8 @@ not_tell_told(Fu):-Fu\=tell,Fu\=told.
 ejec_mul([],_).
 ejec_mul([S1|Resto],Me):-ejec_mul(S1,Me),!,ejec_mul(Resto,Me).
 ejec_mul((X,Y),Me):-expand_term((X,Y),Z),ejec_mul(Z,Me).
+ejec_mul(X,_Me):- var(X), !.
+ejec_mul(X,_Me):- \+ compound(X), !.
 ejec_mul(X,Me):-functor(X,F,N),if((X=[];N\=1),true,no_eve_mult(X,Me,F)).
 no_eve_mult(X,Me,F):-if(F\=eve,true,assert(multip(X,Me))).
 take_rule_mult(F):-if(clause(multip(_,_),_),take_rule_mult1(F),true).

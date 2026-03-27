@@ -1,0 +1,6 @@
+agent('tmp/truck2','truck2','no',italian,
+      ['/home/studente/SmartCity_MAS/conf/communication'],
+      ['/home/studente/SmartCity_MAS/src /communication_fipa','/home/studente/SmartCity_MAS/src /learning','/home/studente/SmartCity_MAS/src /planasp'],
+      'no',
+      '/home/studente/SmartCity_MAS/src /onto/dali_onto.txt',
+      [startI]).

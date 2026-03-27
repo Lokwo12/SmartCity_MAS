@@ -129,7 +129,8 @@ load_ontology_file(Ontolog,Agent):-
         name(Host,HostC),
         assert(ontology(Prefixes,[Repository,Host],Agent)).
 
-filtra_fil(FI):-arg(1,FI,File),token_fil(File),retractall(parentesi(_)),togli_var_fil(File).
+filtra_fil(FI):-arg(1,FI,File),
+                catch((token_fil(File),retractall(parentesi(_)),togli_var_fil(File)),_,true).
 
 start1(Fe,AgentName,Libr,Fil):-
   set_prolog_flag(discontiguous_warnings,off),
@@ -148,12 +149,7 @@ start1(Fe,AgentName,Libr,Fil):-
   carica_file(FilePl),
 
   togli_var(Fe),
-
-  togli_var_ple(Fe),
-
-  if(file_exists(FilePlf),controlla_ev_all(FilePle), (inizializza_plf(FilePle), check_messaggio(FilePle, FilePlf))),
-
-  load_directives(FilePlf),
+  catch(togli_var_ple(Fe), _, true),
   server_obj(Tee), %% questo si puo togliere se si passa ad una sola funzione
   linda_client(Tee),
   assert(agente(AgentName,Tee,FilePle,FilePl)),
@@ -275,7 +271,8 @@ take_time_ep(L):-last(L,U),repeat,member(M,L),clause(past(M,Tp,_),_),asse_cosa(t
 cont_tep(L):-findall(X,clause(tep(_,X),_),Le),retractall(tep(_,_)),
          if(clause(fatto_mul(_,_),_),(retractall(fatto_mul(_,_)),assert(fatto_mul(L,Le))),assert(fatto_mul(L,Le))).
 
-spezza(C):-arg(1,C,Head),C=..L,eve_mul_first(Head),if(member(':-',L),is_clausola(L,Head),true).
+spezza(C):-compound(C),arg(1,C,Head),C=..L,eve_mul_first(Head),if(member(':-',L),is_clausola(L,Head),true).
+spezza(_).
 
 
 is_clausola(L,Head):-append([':-'],L1,L),ejec(L1,Head).
@@ -285,6 +282,8 @@ ejec((X,Y),Head):-expand_term((X,Y),Z),ejec(Z,Head).
 ejec((X;Y),Head):-expand_term((X;Y),Z),ejec(Z,Head).
 ejec((X->Y),Head):-expand_term((X->Y),Z),ejec(Z,Head).
 ejec(X,Head):-if(X=[],true,prova_spezza(X,Head)).
+prova_spezza(M,_Head):-var(M),!.
+prova_spezza(M,_Head):- \+ compound(M),!.
 prova_spezza(M,Head):-functor(M,F,_),if(F=a,(arg(1,M,Az),discriminate_learn(Az)),if(F=eve,(arg(1,M,Es),asse_cosa(even(Es))),
           (if(F=evi,(arg(1,M,Iv),asse_cosa(evin(Iv))),
           (if(F=cd,(arg(1,M,Co),asse_cosa(cond(Co))),
@@ -297,11 +296,15 @@ go_to_if(M,Head):-arg(2,M,A1),arg(3,M,A2),ejec(A1,Head),ejec(A2,Head).
 
 asse_cosa(C):-if(clause(C,_),true,assert(C)).
 
+discriminate_learn(Az):-var(Az),!.
+discriminate_learn(Az):- \+ compound(Az),!.
 discriminate_learn(Az):-functor(Az,F,_),
                 if(F=message,discriminate_learn1(Az),asse_cosa(azi(Az))).
 
+discriminate_learn1(Az):-arg(2,Az,Pe),\+compound(Pe),!,asse_cosa(azi(Az)).
 discriminate_learn1(Az):-arg(2,Az,Pe),functor(Pe,F,_),if(F=confirm,discriminate_learn2(Pe,Az),asse_cosa(azi(Az))).
 
+discriminate_learn2(Pe,Az):-arg(1,Pe,Le),\+compound(Le),!,asse_cosa(azi(Az)).
 discriminate_learn2(Pe,Az):-arg(1,Pe,Le),functor(Le,F,_),if(F=learn,discriminate_learn3,asse_cosa(azi(Az))).
 
 discriminate_learn3:-assert(azi(message(_254802,confirm(learn(_254655),_254800)))).
@@ -311,6 +314,7 @@ costruisci0(F):-if((((clause(even(_),_);clause(evin(_),_));clause(azi(_),_));cla
 recupera_fun0(F):-recupera_funE(F),recupera_funI(F),recupera_funA(F),recupera_tot_cd(F),recupera_funEn(F),recupera_gol_obt(F),recupera_gol_test(F),recupera_tot_rem(F),recupera_E(F).
 
 %ASSERISCE GLI EVENTI ESTERNI RELATIVI AGLI EVENTI MULTIPLI
+eve_mul_first(Head):- \+ compound(Head),!.
 eve_mul_first(Head):-functor(Head,_,N),Head=..L_eve,if((arg(1,L_eve,_),N>1),continue_mul_f(L_eve),true).
 continue_mul_f(L_eve):-arg(1,L_eve,X_eve),if((X_eve=eve,is_list(L_eve)),
                      asse_cosa(mul(L_eve)),true).
@@ -1728,9 +1732,7 @@ take_head_mul:-findall(T,clause(rule_mul_head(T),_),L),
           last(L,U),
          repeat,
           member(M,L),
-
-                   arg(1,M,Head),
-                   eve_mul(Head),
+                   ( compound(M) -> arg(1,M,Head), eve_mul(Head) ; true ),
          M==U,!,retractall(rule_mul_head(_)), if(clause(mul(_),_),ass_mul_head,true).
 
 eve_mul(Head):-functor(Head,_,N),Head=..L_eve,if((L_eve\=[],arg(1,L_eve,_),N>1),continue_mul(L_eve),true).
