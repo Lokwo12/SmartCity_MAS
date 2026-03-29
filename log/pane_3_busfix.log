@@ -1,0 +1,28 @@
+Launching agent inst
+ance: smart_bin1.txt
+SICStus 4.6.0 (x86_6
+4-linux-glibc2.17):
+Mon Apr  6 09:23:37
+PDT 2020
+Licensed to studentS
+P4.6cc.univaq.it
+[SMARTBIN smart_bin1
+] startI fired
+..................
+ Actived Agent smart
+_bin1 ..............
+.....
+[SMARTBIN smart_bin1
+] level=20%
+[SMARTBIN smart_bin1
+] level=40%
+[SMARTBIN smart_bin1
+] level=60%
+[SMARTBIN smart_bin1
+] level=80%
+[SMARTBIN smart_bin1
+] level=100%
+[SMARTBIN smart_bin1
+] FULL -> notify con
+trol_center
+

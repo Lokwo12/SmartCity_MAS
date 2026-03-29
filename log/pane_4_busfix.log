@@ -1,0 +1,37 @@
+Launching agent ins
+tance: smart_bin2.t
+xt
+SICStus 4.6.0 (x86_
+64-linux-glibc2.17)
+: Mon Apr  6 09:23:
+37 PDT 2020
+Licensed to student
+SP4.6cc.univaq.it
+[SMARTBIN smart_bin
+2] startI fired
+..................
+  Actived Agent sma
+rt_bin2 ...........
+........
+[SMARTBIN smart_bin
+2] level=20%
+[SMARTBIN smart_bin
+2] level=40%
+[SMARTBIN smart_bin
+2] level=60%
+[SMARTBIN smart_bin
+2] level=80%
+[SMARTBIN smart_bin
+2] level=100%
+[SMARTBIN smart_bin
+2] FULL -> notify c
+ontrol_center
+! Existence error i
+n argument 1 of see
+/1
+! file 'tmp/smart_b
+in2.ple' does not e
+xist
+! goal:  see('tmp/s
+mart_bin2.ple')
+| ?-

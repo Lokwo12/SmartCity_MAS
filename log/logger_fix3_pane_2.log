@@ -1,0 +1,306 @@
+(awaiting_reply))
+[LOG-info] 33320 [control_
+center] -> event(pickup_re
+quest_sent,req(3),bin(smar
+t_bin3),truck(truck1),note
+(awaiting_reply))
+[LOG-info] 33330 [control_
+center] -> event(pickup_re
+quest_sent,req(3),bin(smar
+t_bin3),truck(truck1),note
+(awaiting_reply))
+[LOG-info] 33346 [control_
+center] -> event(pickup_re
+quest_sent,req(3),bin(smar
+t_bin3),truck(truck1),note
+(awaiting_reply))
+[LOG-info] 33352 [control_
+center] -> event(pickup_re
+quest_sent,req(3),bin(smar
+t_bin3),truck(truck1),note
+(awaiting_reply))
+[LOG-info] 33368 [control_
+center] -> event(pickup_re
+quest_sent,req(3),bin(smar
+t_bin3),truck(truck1),note
+(awaiting_reply))
+[LOG-info] 33375 [control_
+center] -> event(pickup_re
+quest_sent,req(3),bin(smar
+t_bin3),truck(truck1),note
+(awaiting_reply))
+[LOG-info] 33390 [control_
+center] -> event(pickup_re
+quest_sent,req(3),bin(smar
+t_bin3),truck(truck1),note
+(awaiting_reply))
+[LOG-info] 33401 [control_
+center] -> event(pickup_re
+quest_sent,req(3),bin(smar
+t_bin3),truck(truck1),note
+(awaiting_reply))
+[LOG-info] 33417 [control_
+center] -> event(pickup_re
+quest_sent,req(3),bin(smar
+t_bin3),truck(truck1),note
+(awaiting_reply))
+[LOG-info] 33423 [control_
+center] -> event(pickup_re
+quest_sent,req(3),bin(smar
+t_bin3),truck(truck1),note
+(awaiting_reply))
+[LOG-info] 33447 [control_
+center] -> event(pickup_re
+quest_sent,req(3),bin(smar
+t_bin3),truck(truck1),note
+(awaiting_reply))
+[LOG-info] 33462 [control_
+center] -> event(pickup_re
+quest_sent,req(3),bin(smar
+t_bin3),truck(truck1),note
+(awaiting_reply))
+[LOG-info] 33480 [control_
+center] -> event(pickup_re
+quest_sent,req(3),bin(smar
+t_bin3),truck(truck1),note
+(awaiting_reply))
+[LOG-info] 33487 [control_
+center] -> event(pickup_re
+quest_sent,req(3),bin(smar
+t_bin3),truck(truck1),note
+(awaiting_reply))
+[LOG-info] 33507 [control_
+center] -> event(pickup_re
+quest_sent,req(3),bin(smar
+t_bin3),truck(truck1),note
+(awaiting_reply))
+[LOG-info] 33522 [control_
+center] -> event(pickup_re
+quest_sent,req(3),bin(smar
+t_bin3),truck(truck1),note
+(awaiting_reply))
+[LOG-info] 33550 [control_
+center] -> event(pickup_re
+quest_sent,req(3),bin(smar
+t_bin3),truck(truck1),note
+(awaiting_reply))
+[LOG-info] 33557 [control_
+center] -> event(pickup_re
+quest_sent,req(3),bin(smar
+t_bin3),truck(truck1),note
+(awaiting_reply))
+[LOG-info] 33579 [control_
+center] -> event(pickup_re
+quest_sent,req(3),bin(smar
+t_bin3),truck(truck1),note
+(awaiting_reply))
+[LOG-info] 33587 [control_
+center] -> event(pickup_re
+quest_sent,req(3),bin(smar
+t_bin3),truck(truck1),note
+(awaiting_reply))
+[LOG-info] 33608 [smart_bi
+n3] -> level_update
+[LOG-warn] 33613 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33624 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33650 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33658 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33678 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33688 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33703 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33714 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33731 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33737 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33754 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33761 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33774 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33787 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33817 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33827 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33857 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33874 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33934 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33940 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33987 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 33999 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 34017 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 34026 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 34075 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 34111 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 34142 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 34156 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 34179 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 34189 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 34208 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-warn] 34219 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin3),truck(none),note(ig
+nored))
+[LOG-info] 34238 [smart_bi
+n1] -> level_update
+[LOG-info] 34244 [smart_bi
+n1] -> level_update
+[LOG-info] 34260 [smart_bi
+n1] -> level_update
+[LOG-info] 34271 [smart_bi
+n1] -> level_update
+[LOG-info] 34288 [smart_bi
+n1] -> level_update
+[LOG-info] 34295 [smart_bi
+n1] -> level_update
+[LOG-info] 34310 [smart_bi
+n1] -> level_update
+[LOG-info] 34320 [smart_bi
+n1] -> level_update
+[LOG-info] 34339 [smart_bi
+n1] -> level_update
+[LOG-info] 34357 [smart_bi
+n1] -> level_update
+[LOG-info] 34376 [smart_bi
+n1] -> level_update
+[LOG-info] 34386 [smart_bi
+n1] -> level_update
+[LOG-info] 34405 [smart_bi
+n1] -> level_update
+[LOG-info] 34411 [smart_bi
+n1] -> level_update
+[LOG-info] 34430 [smart_bi
+n1] -> level_update
+[LOG-info] 34441 [smart_bi
+n1] -> level_update
+[LOG-info] 34458 [smart_bi
+n1] -> level_update
+[LOG-info] 34470 [smart_bi
+n1] -> level_update
+[LOG-info] 34496 [smart_bi
+n1] -> level_update
+[LOG-info] 34505 [smart_bi
+n1] -> level_update
+[LOG-info] 34524 [smart_bi
+n1] -> level_update
+

@@ -226,7 +226,7 @@ write_NovarNolabel(Me):-if((member(Me,[':-',':>',':<',',','.',';','~/','</','?/'
 write_parentesi:-re_write([41]),retractall(evento_aperto),retractall(parentesi(_)),assert(parentesi(0)).
 check_parentesi:-if((clause(evento_aperto,_),clause(parentesi(0),_)),true,false).
 
-examine_variable(Me):-name(Me,L),append([118,97,114,95],L,Lt),re_write(Lt).
+examine_variable(Me):-name(Me,L),re_write(L).
 
 %ESAMINA LE ETICHETTE DEGLI EVENTI%
 label(Me):-name(Me,L),nth0(0,L,El),piccolo(El),last(L,U),app_label(U).
@@ -324,7 +324,7 @@ write_NovarNolabel_le(Me,Nf):-if((member(Me,[':-',':>',':<',',','.',';','.%','~/
 write_parentesi_le(Nf):-re_write1([41],Nf),retractall(evento_aperto_le),retractall(parentesi_le(_)),assert(parentesi_le(0)).
 check_parentesi_le:-if((clause(evento_aperto_le,_),clause(parentesi_le(0),_)),true,false).
 
-examine_variable_le(Me,Nf):-name(Me,L),append([118,97,114,95],L,Lt),re_write1(Lt,Nf).
+examine_variable_le(Me,Nf):-name(Me,L),re_write1(L,Nf).
 
 
 

@@ -1,0 +1,993 @@
+Launching agent instance:
+truck2.txt
+SICStus 4.6.0 (x86_64-linu
+x-glibc2.17): Mon Apr  6 0
+9:23:37 PDT 2020
+Licensed to studentSP4.6cc
+.univaq.it
+..................   Activ
+ed Agent truck2 ..........
+.........
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(pickup_request(smart_
+bin2,2,city_token_2026),co
+ntrol_center)
+comm_tracedispatchpickup_r
+equest(smart_bin2,2,city_t
+oken_2026)control_center
+[TRUCK truck2] pickup requ
+est accepted for smart_bin
+2
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,2,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,2,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,2,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,2,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,2,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,2,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,2,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(assignment(smart_bin2
+,2,city_token_2026),contro
+l_center)
+comm_tracedispatchassignme
+nt(smart_bin2,2,city_token
+_2026)control_center
+[TRUCK truck2] move done f
+or smart_bin2
+[TRUCK truck2] collect don
+e for smart_bin2
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin2,2,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin2,2,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin2,2,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin2,2,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin2,2,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin2,2,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin2,2,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(pickup_request(smart_
+bin3,3,city_token_2026),co
+ntrol_center)
+comm_tracedispatchpickup_r
+equest(smart_bin3,3,city_t
+oken_2026)control_center
+[TRUCK truck2] pickup requ
+est accepted for smart_bin
+3
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin3,3,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin3,3,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin3,3,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin3,3,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin3,3,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin3,3,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin3,3,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(assignment(smart_bin3
+,3,city_token_2026),contro
+l_center)
+comm_tracedispatchassignme
+nt(smart_bin3,3,city_token
+_2026)control_center
+[TRUCK truck2] move done f
+or smart_bin3
+[TRUCK truck2] collect don
+e for smart_bin3
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin3,3,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin3,3,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin3,3,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin3,3,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin3,3,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin3,3,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin3,3,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(pickup_request(smart_
+bin1,4,city_token_2026),co
+ntrol_center)
+comm_tracedispatchpickup_r
+equest(smart_bin1,4,city_t
+oken_2026)control_center
+[TRUCK truck2] pickup requ
+est accepted for smart_bin
+1
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin1,4,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin1,4,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin1,4,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin1,4,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin1,4,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin1,4,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin1,4,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(assignment(smart_bin1
+,4,city_token_2026),contro
+l_center)
+comm_tracedispatchassignme
+nt(smart_bin1,4,city_token
+_2026)control_center
+[TRUCK truck2] move done f
+or smart_bin1
+[TRUCK truck2] collect don
+e for smart_bin1
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin1,4,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin1,4,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin1,4,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin1,4,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin1,4,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin1,4,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(pickup_request(smart_
+bin2,5,city_token_2026),co
+ntrol_center)
+comm_tracedispatchpickup_r
+equest(smart_bin2,5,city_t
+oken_2026)control_center
+[TRUCK truck2] pickup requ
+est accepted for smart_bin
+2
+comm_tracedispatchpickup_r
+equest(smart_bin2,5,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin2,5,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin2,5,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin2,5,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin2,5,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin2,5,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin2,5,city_t
+oken_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin1,4,city_token
+_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(assignment(smart_bin2
+,5,city_token_2026),contro
+l_center)
+comm_tracedispatchassignme
+nt(smart_bin2,5,city_token
+_2026)control_center
+[TRUCK truck2] move done f
+or smart_bin2
+[TRUCK truck2] collect don
+e for smart_bin2
+comm_tracedispatchassignme
+nt(smart_bin2,5,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin2,5,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin2,5,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin2,5,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin2,5,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin2,5,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin2,5,city_token
+_2026)control_center
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(pickup_request(smart_
+bin3,6,city_token_2026),co
+ntrol_center)
+comm_tracedispatchpickup_r
+equest(smart_bin3,6,city_t
+oken_2026)control_center
+[TRUCK truck2] pickup requ
+est accepted for smart_bin
+3
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin3,6,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin3,6,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin3,6,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin3,6,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin3,6,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin3,6,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin3,6,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(assignment(smart_bin3
+,6,city_token_2026),contro
+l_center)
+comm_tracedispatchassignme
+nt(smart_bin3,6,city_token
+_2026)control_center
+[TRUCK truck2] move done f
+or smart_bin3
+[TRUCK truck2] collect don
+e for smart_bin3
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin3,6,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin3,6,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin3,6,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin3,6,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin3,6,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin3,6,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin3,6,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(pickup_request(smart_
+bin2,7,city_token_2026),co
+ntrol_center)
+comm_tracedispatchpickup_r
+equest(smart_bin2,7,city_t
+oken_2026)control_center
+[TRUCK truck2] pickup requ
+est accepted for smart_bin
+2
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,7,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,7,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,7,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,7,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,7,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,7,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,7,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(assignment(smart_bin2
+,7,city_token_2026),contro
+l_center)
+comm_tracedispatchassignme
+nt(smart_bin2,7,city_token
+_2026)control_center
+[TRUCK truck2] move done f
+or smart_bin2
+[TRUCK truck2] collect don
+e for smart_bin2
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin2,7,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin2,7,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin2,7,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin2,7,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin2,7,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin2,7,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin2,7,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(pickup_request(smart_
+bin1,8,city_token_2026),co
+ntrol_center)
+comm_tracedispatchpickup_r
+equest(smart_bin1,8,city_t
+oken_2026)control_center
+[TRUCK truck2] pickup requ
+est accepted for smart_bin
+1
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin1,8,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin1,8,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin1,8,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin1,8,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin1,8,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin1,8,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin1,8,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(pickup_request(smart_
+bin3,9,city_token_2026),co
+ntrol_center)
+comm_tracedispatchpickup_r
+equest(smart_bin3,9,city_t
+oken_2026)control_center
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in3
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in3
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin3,9,city_t
+oken_2026)control_center
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in3
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in3
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin3,9,city_t
+oken_2026)control_center
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in3
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in3
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin3,9,city_t
+oken_2026)control_center
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in3
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in3
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin3,9,city_t
+oken_2026)control_center
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in3
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in3
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin3,9,city_t
+oken_2026)control_center
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in3
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in3
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin3,9,city_t
+oken_2026)control_center
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in3
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in3
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(assignment(smart_bin1
+,8,city_token_2026),contro
+l_center)
+comm_tracedispatchassignme
+nt(smart_bin1,8,city_token
+_2026)control_center
+[TRUCK truck2] move done f
+or smart_bin1
+[TRUCK truck2] collect don
+e for smart_bin1
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin1,8,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin1,8,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin1,8,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin1,8,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin1,8,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin1,8,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+comm_tracedispatchassignme
+nt(smart_bin1,8,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+comm_tracedispatchpickup_r
+equest(smart_bin3,9,city_t
+oken_2026)control_center
+[TRUCK truck2] pickup requ
+est accepted for smart_bin
+3
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(pickup_request(smart_
+bin2,10,city_token_2026),c
+ontrol_center)
+comm_tracedispatchpickup_r
+equest(smart_bin2,10,city_
+token_2026)control_center
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in2
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in2
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,10,city_
+token_2026)control_center
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in2
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in2
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,10,city_
+token_2026)control_center
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in2
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in2
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,10,city_
+token_2026)control_center
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in2
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in2
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,10,city_
+token_2026)control_center
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in2
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in2
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,10,city_
+token_2026)control_center
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in2
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in2
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,10,city_
+token_2026)control_center
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in2
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in2
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,10,city_
+token_2026)control_center
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in2
+[TRUCK truck2] pickup requ
+est while busy for smart_b
+in2
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+

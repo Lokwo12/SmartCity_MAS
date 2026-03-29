@@ -1,0 +1,246 @@
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+[RX CORE] to=control_cente
+r from=smart_bin1 msg=send
+_message(reset_ack(smart_b
+in1,8,city_token_2026),sma
+rt_bin1)
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=smart_bin1 msg=send
+_message(reset_ack(smart_b
+in1,8,city_token_2026),sma
+rt_bin1)
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+[RX CORE] to=control_cente
+r from=smart_bin1 msg=send
+_message(reset_ack(smart_b
+in1,8,city_token_2026),sma
+rt_bin1)
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+[RX CORE] to=control_cente
+r from=smart_bin1 msg=send
+_message(reset_ack(smart_b
+in1,8,city_token_2026),sma
+rt_bin1)
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchreset_ac
+k(smart_bin1,8,city_token_
+2026)smart_bin1
+comm_tracedispatchjob_acce
+pt(truck2,smart_bin2,6,cit
+y_token_2026)truck2
+comm_tracedispatchjob_acce
+pt(truck2,smart_bin2,6,cit
+y_token_2026)truck2
+comm_tracedispatchjob_acce
+pt(truck2,smart_bin2,6,cit
+y_token_2026)truck2
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=smart_bin2 msg=send
+_message(bin_full(smart_bi
+n2,city_token_2026),smart_
+bin2)
+comm_tracedispatchbin_full
+(smart_bin2,city_token_202
+6)smart_bin2
+[CC] bin_full received fro
+m smart_bin2
+[CC] candidates for smart_
+bin2: [truck1,truck2,truck
+3]
+[CC] dispatch req(9)-smart
+_bin2 -> truck1
+[RX CORE] to=control_cente
+r from=smart_bin3 msg=send
+_message(bin_full(smart_bi
+n3,city_token_2026),smart_
+bin3)
+comm_tracedispatchbin_full
+(smart_bin3,city_token_202
+6)smart_bin3
+[CC] bin_full received fro
+m smart_bin3
+[CC] candidates for smart_
+bin3: [truck1,truck2,truck
+3]
+[CC] dispatch req(10)-smar
+t_bin3 -> truck1
+[CC] autonomous cycle
+comm_tracedispatchbin_full
+(smart_bin3,city_token_202
+6)smart_bin3
+comm_tracedispatchbin_full
+(smart_bin3,city_token_202
+6)smart_bin3
+comm_tracedispatchbin_full
+(smart_bin3,city_token_202
+6)smart_bin3
+comm_tracedispatchbin_full
+(smart_bin3,city_token_202
+6)smart_bin3
+comm_tracedispatchbin_full
+(smart_bin3,city_token_202
+6)smart_bin3
+comm_tracedispatchbin_full
+(smart_bin3,city_token_202
+6)smart_bin3
+comm_tracedispatchbin_full
+(smart_bin3,city_token_202
+6)smart_bin3
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_accept(truck1,sma
+rt_bin2,9,city_token_2026)
+,truck1)
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin2,9,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin2,9,cit
+y_token_2026)truck1
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin2,9,cit
+y_token_2026)truck1
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin2,9,cit
+y_token_2026)truck1
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin2,9,cit
+y_token_2026)truck1
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin2,9,cit
+y_token_2026)truck1
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin2,9,cit
+y_token_2026)truck1
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin2,9,cit
+y_token_2026)truck1
+comm_tracedispatchbin_full
+(smart_bin2,city_token_202
+6)smart_bin2
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_refuse(truck1,sma
+rt_bin3,10,city_token_2026
+),truck1)
+comm_tracedispatchjob_refu
+se(truck1,smart_bin3,10,ci
+ty_token_2026)truck1
+[CC] candidates for smart_
+bin3: [truck2,truck3]
+[CC] dispatch req(10)-smar
+t_bin3 -> truck2
+comm_tracedispatchjob_refu
+se(truck1,smart_bin3,10,ci
+ty_token_2026)truck1
+

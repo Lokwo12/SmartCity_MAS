@@ -1,1 +1,1 @@
-controlcenter
+control_center

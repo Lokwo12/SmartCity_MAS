@@ -1,0 +1,41 @@
+Launching agent instance:
+smart_bin1.txt
+SICStus 4.6.0 (x86_64-linu
+x-glibc2.17): Mon Apr  6 0
+9:23:37 PDT 2020
+Licensed to studentSP4.6cc
+.univaq.it
+[SMARTBIN smart_bin1] star
+tI fired
+[SMART_BIN smart_bin1] STA
+RT
+..................   Activ
+ed Agent smart_bin1 ......
+.............
+[SMART_BIN smart_bin1] LEV
+EL=20%
+[SMART_BIN smart_bin1] LEV
+EL=40%
+[SMART_BIN smart_bin1] LEV
+EL=60%
+[SMART_BIN smart_bin1] LEV
+EL=80%
+[SMART_BIN smart_bin1] LEV
+EL=100%
+[SMART_BIN smart_bin1] FUL
+L -> notify control_center
+[SMART_BIN smart_bin1] RES
+ET -> level=0%
+[SMART_BIN smart_bin1] LEV
+EL=20%
+[SMART_BIN smart_bin1] LEV
+EL=40%
+[SMART_BIN smart_bin1] LEV
+EL=60%
+[SMART_BIN smart_bin1] LEV
+EL=80%
+[SMART_BIN smart_bin1] LEV
+EL=100%
+[SMART_BIN smart_bin1] FUL
+L -> notify control_center
+

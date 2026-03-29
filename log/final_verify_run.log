@@ -1,0 +1,29 @@
+[H[2J[3JStopping existing agents...
+Cleaning build/work/tmp...
+Using LINDA port: 3010
+Building agent instances...
+  control_center  (type: control_center)
+  logger  (type: logger)
+  smart_bin1  (type: smart_bin)
+  smart_bin2  (type: smart_bin)
+  smart_bin3  (type: smart_bin)
+  truck1  (type: truck)
+  truck2  (type: truck)
+  truck3  (type: truck)
+Starting LINDA Server on port 3010...
+  Attempt 1: waiting 8s...
+Launching agent: control_center
+Launching agent: logger
+Launching agent: smart_bin1
+Launching agent: smart_bin2
+Launching agent: smart_bin3
+Launching agent: truck1
+Launching agent: truck2
+Launching agent: truck3
+
+========================================
+  SmartCity MAS started successfully
+  LINDA port: 3010
+  Agents: 3 bins, 3 trucks, logger, control_center
+========================================
+

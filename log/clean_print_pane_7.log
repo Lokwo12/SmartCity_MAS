@@ -1,0 +1,21 @@
+Launching agent instance:
+truck2.txt
+SICStus 4.6.0 (x86_64-linu
+x-glibc2.17): Mon Apr  6 0
+9:23:37 PDT 2020
+Licensed to studentSP4.6cc
+.univaq.it
+! Syntax error in read/2
+! ) cannot start an expres
+sion
+! in line 68
+! log_comm ( _225607 , _22
+5609 , _225611 ) :- comm_t
+race ( on ) , ! , write (
+[ COMM ] ) , write ( _2256
+07 ) , write ( from =
+! <<here>>
+! ) , write ( _225611 ) ,
+write ( payload = ) , writ
+e ( _225609 ) , nl .
+| ?-

@@ -1,0 +1,1832 @@
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_refuse(truck1,sma
+rt_bin2,2,city_token_2026)
+,truck1)
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchbin_full
+(smart_bin1,city_token_202
+6)smart_bin1
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_refuse(truck1,sma
+rt_bin2,2,city_token_2026)
+,truck1)
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_refuse(truck1,sma
+rt_bin2,2,city_token_2026)
+,truck1)
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_refuse(truck1,sma
+rt_bin2,2,city_token_2026)
+,truck1)
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_refuse(truck1,sma
+rt_bin2,2,city_token_2026)
+,truck1)
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_refuse(truck1,sma
+rt_bin2,2,city_token_2026)
+,truck1)
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchbin_full
+(smart_bin1,city_token_202
+6)smart_bin1
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_refuse(truck1,sma
+rt_bin2,2,city_token_2026)
+,truck1)
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_refuse(truck1,sma
+rt_bin2,2,city_token_2026)
+,truck1)
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_refuse(truck1,sma
+rt_bin2,2,city_token_2026)
+,truck1)
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_refuse(truck1,sma
+rt_bin2,2,city_token_2026)
+,truck1)
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_refuse(truck1,sma
+rt_bin2,2,city_token_2026)
+,truck1)
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_refuse(truck1,sma
+rt_bin2,2,city_token_2026)
+,truck1)
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_refuse(truck1,sma
+rt_bin2,2,city_token_2026)
+,truck1)
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_refuse(truck1,sma
+rt_bin2,2,city_token_2026)
+,truck1)
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_refuse(truck1,sma
+rt_bin2,2,city_token_2026)
+,truck1)
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_accept(truck1,sma
+rt_bin1,1,city_token_2026)
+,truck1)
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_accept(truck1,sma
+rt_bin1,1,city_token_2026)
+,truck1)
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_accept(truck1,sma
+rt_bin1,1,city_token_2026)
+,truck1)
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_accept(truck1,sma
+rt_bin1,1,city_token_2026)
+,truck1)
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=smart_bin3 msg=send
+_message(bin_full(smart_bi
+n3,city_token_2026),smart_
+bin3)
+comm_tracedispatchbin_full
+(smart_bin3,city_token_202
+6)smart_bin3
+[CC] bin_full received fro
+m smart_bin3
+[CC] candidates for smart_
+bin3: [truck1,truck2,truck
+3]
+[CC] dispatch req(3)-smart
+_bin3 -> truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchbin_full
+(smart_bin3,city_token_202
+6)smart_bin3
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchbin_full
+(smart_bin3,city_token_202
+6)smart_bin3
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchbin_full
+(smart_bin3,city_token_202
+6)smart_bin3
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchbin_full
+(smart_bin3,city_token_202
+6)smart_bin3
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchbin_full
+(smart_bin3,city_token_202
+6)smart_bin3
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchbin_full
+(smart_bin3,city_token_202
+6)smart_bin3
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchbin_full
+(smart_bin3,city_token_202
+6)smart_bin3
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_accept(truck1,sma
+rt_bin1,1,city_token_2026)
+,truck1)
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(assignment_ack(truck1
+,smart_bin1,1,city_token_2
+026),truck1)
+comm_tracedispatchassignme
+nt_ack(truck1,smart_bin1,1
+,city_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchassignme
+nt_ack(truck1,smart_bin1,1
+,city_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchassignme
+nt_ack(truck1,smart_bin1,1
+,city_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchassignme
+nt_ack(truck1,smart_bin1,1
+,city_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchassignme
+nt_ack(truck1,smart_bin1,1
+,city_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchassignme
+nt_ack(truck1,smart_bin1,1
+,city_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchassignme
+nt_ack(truck1,smart_bin1,1
+,city_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchassignme
+nt_ack(truck1,smart_bin1,1
+,city_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(collection_complete(s
+mart_bin1,1,city_token_202
+6),truck1)
+comm_tracedispatchcollecti
+on_complete(smart_bin1,1,c
+ity_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchcollecti
+on_complete(smart_bin1,1,c
+ity_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchcollecti
+on_complete(smart_bin1,1,c
+ity_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchcollecti
+on_complete(smart_bin1,1,c
+ity_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchcollecti
+on_complete(smart_bin1,1,c
+ity_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchcollecti
+on_complete(smart_bin1,1,c
+ity_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchcollecti
+on_complete(smart_bin1,1,c
+ity_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchcollecti
+on_complete(smart_bin1,1,c
+ity_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_accept(truck1,sma
+rt_bin1,1,city_token_2026)
+,truck1)
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_accept(truck1,sma
+rt_bin1,1,city_token_2026)
+,truck1)
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_accept(truck1,sma
+rt_bin1,1,city_token_2026)
+,truck1)
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_accept(truck1,sma
+rt_bin1,1,city_token_2026)
+,truck1)
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_accept(truck1,sma
+rt_bin1,1,city_token_2026)
+,truck1)
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_accept(truck1,sma
+rt_bin1,1,city_token_2026)
+,truck1)
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_accept(truck1,sma
+rt_bin1,1,city_token_2026)
+,truck1)
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_accept(truck1,sma
+rt_bin1,1,city_token_2026)
+,truck1)
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_accept(truck1,sma
+rt_bin1,1,city_token_2026)
+,truck1)
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_refu
+se(truck1,smart_bin2,2,cit
+y_token_2026)truck1
+[RX CORE] to=control_cente
+r from=truck1 msg=send_mes
+sage(job_accept(truck1,sma
+rt_bin1,1,city_token_2026)
+,truck1)
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+comm_tracedispatchjob_acce
+pt(truck1,smart_bin1,1,cit
+y_token_2026)truck1
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+[CC] autonomous cycle
+

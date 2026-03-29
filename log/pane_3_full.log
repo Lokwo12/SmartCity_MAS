@@ -1,0 +1,1901 @@
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] execute_do_ac
+tion_propose
+[STEP EXIT] execute_do_act
+ion_propose
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] poll_flow_que
+ue
+[STEP EXIT] poll_flow_queu
+e
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] svuota_coda_p
+riority
+[STEP EXIT] svuota_coda_pr
+iority
+[STEP ENTER] prendi_action
+_normal
+[STEP EXIT] prendi_action_
+normal
+[STEP ENTER] controlla_vit
+a
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monito
+r_tick
+[STEP EXIT] forced_monitor
+_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+

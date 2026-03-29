@@ -1,0 +1,233 @@
+Launching agent instance: logger.txt
+SICStus 4.6.0 (x86_64-linux-glibc2.17):
+ Mon Apr  6 09:23:37 PDT 2020
+Licensed to studentSP4.6cc.univaq.it
+..................   Actived Agent logg
+er ...................
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monitor_tick
+[STEP EXIT] forced_monitor_tick
+[STEP ENTER] poll_flow_queue
+[STEP EXIT] poll_flow_queue
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_priority
+[STEP EXIT] svuota_coda_priority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] blocco_constr
+[STEP EXIT] blocco_constr
+[STEP ENTER] execute_do_action_propose
+[STEP EXIT] execute_do_action_propose
+[STEP ENTER] controlla_messaggi_freq
+[CORE WARN] step failed: controlla_mess
+aggi_freq err=error(existence_error(pro
+cedure,user:controlla_messaggi_freq/0),
+existence_error($@(user:controlla_messa
+ggi_freq,134376374208428),0,procedure,u
+ser:controlla_messaggi_freq/0,0))
+[STEP EXIT] controlla_messaggi_freq
+[STEP ENTER] prendi_action_normal
+[STEP EXIT] prendi_action_normal
+[STEP ENTER] controlla_vita
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monitor_tick
+[STEP EXIT] forced_monitor_tick
+[STEP ENTER] poll_flow_queue
+[STEP EXIT] poll_flow_queue
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] blocco_constr
+[STEP EXIT] blocco_constr
+[STEP ENTER] execute_do_action_propose
+[STEP EXIT] execute_do_action_propose
+[STEP ENTER] controlla_messaggi_freq
+[CORE WARN] step failed: controlla_mess
+aggi_freq err=error(existence_error(pro
+cedure,user:controlla_messaggi_freq/0),
+existence_error($@(user:controlla_messa
+ggi_freq,134376374208428),0,procedure,u
+ser:controlla_messaggi_freq/0,0))
+[STEP EXIT] controlla_messaggi_freq
+[STEP ENTER] svuota_coda_priority
+[STEP EXIT] svuota_coda_priority
+[STEP ENTER] prendi_action_normal
+[STEP EXIT] prendi_action_normal
+[STEP ENTER] controlla_vita
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monitor_tick
+[STEP EXIT] forced_monitor_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monitor_tick
+[STEP EXIT] forced_monitor_tick
+[STEP ENTER] poll_flow_queue
+[STEP EXIT] poll_flow_queue
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_priority
+[STEP EXIT] svuota_coda_priority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] blocco_constr
+[STEP EXIT] blocco_constr
+[STEP ENTER] execute_do_action_propose
+[STEP EXIT] execute_do_action_propose
+[STEP ENTER] controlla_messaggi_freq
+[CORE WARN] step failed: controlla_mess
+aggi_freq err=error(existence_error(pro
+cedure,user:controlla_messaggi_freq/0),
+existence_error($@(user:controlla_messa
+ggi_freq,134376374208428),0,procedure,u
+ser:controlla_messaggi_freq/0,0))
+[STEP EXIT] controlla_messaggi_freq
+[STEP ENTER] prendi_action_normal
+[STEP EXIT] prendi_action_normal
+[STEP ENTER] controlla_vita
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monitor_tick
+[STEP EXIT] forced_monitor_tick
+[STEP ENTER] poll_flow_queue
+[STEP EXIT] poll_flow_queue
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] blocco_constr
+[STEP EXIT] blocco_constr
+[STEP ENTER] execute_do_action_propose
+[STEP EXIT] execute_do_action_propose
+[STEP ENTER] controlla_messaggi_freq
+[CORE WARN] step failed: controlla_mess
+aggi_freq err=error(existence_error(pro
+cedure,user:controlla_messaggi_freq/0),
+existence_error($@(user:controlla_messa
+ggi_freq,134376374208428),0,procedure,u
+ser:controlla_messaggi_freq/0,0))
+[STEP EXIT] controlla_messaggi_freq
+[STEP ENTER] svuota_coda_priority
+[STEP EXIT] svuota_coda_priority
+[STEP ENTER] prendi_action_normal
+[STEP EXIT] prendi_action_normal
+[STEP ENTER] controlla_vita
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monitor_tick
+[STEP EXIT] forced_monitor_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+[STEP ENTER] internal
+[STEP ENTER] forced_monitor_tick
+[STEP EXIT] forced_monitor_tick
+[STEP ENTER] poll_flow_queue
+[STEP EXIT] poll_flow_queue
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] ev_int
+[STEP EXIT] ev_int
+[STEP ENTER] ev_goal
+[STEP EXIT] ev_goal
+[STEP ENTER] ev_int0
+[STEP EXIT] ev_int0
+[STEP ENTER] ev_int2
+[STEP EXIT] ev_int2
+[STEP ENTER] svuota_coda_priority
+[STEP EXIT] svuota_coda_priority
+[STEP ENTER] scatena
+[STEP EXIT] scatena
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] blocco_constr
+[STEP EXIT] blocco_constr
+[STEP ENTER] execute_do_action_propose
+[STEP EXIT] execute_do_action_propose
+[STEP ENTER] controlla_messaggi_freq
+[CORE WARN] step failed: controlla_mess
+aggi_freq err=error(existence_error(pro
+cedure,user:controlla_messaggi_freq/0),
+existence_error($@(user:controlla_messa
+ggi_freq,134376374208428),0,procedure,u
+ser:controlla_messaggi_freq/0,0))
+[STEP EXIT] controlla_messaggi_freq
+[STEP ENTER] prendi_action_normal
+[STEP EXIT] prendi_action_normal
+[STEP ENTER] controlla_vita
+[STEP EXIT] controlla_vita
+[STEP EXIT] internal
+[STEP ENTER] external
+[STEP ENTER] forced_monitor_tick
+[STEP EXIT] forced_monitor_tick
+[STEP ENTER] poll_flow_queue
+[STEP EXIT] poll_flow_queue
+[STEP ENTER] ricmess
+[STEP EXIT] ricmess
+[STEP ENTER] processa_eve
+[STEP EXIT] processa_eve
+[STEP ENTER] examine_mul
+[STEP EXIT] examine_mul
+[STEP ENTER] keep_action
+[STEP EXIT] keep_action
+[STEP ENTER] blocco_constr
+[STEP EXIT] blocco_constr
+[STEP ENTER] execute_do_action_propose
+[STEP EXIT] execute_do_action_propose
+[STEP ENTER] controlla_messaggi_freq
+[CORE WARN] step failed: controlla_mess
+aggi_freq err=error(existence_error(pro
+cedure,user:controlla_messaggi_freq/0),
+existence_error($@(user:controlla_messa
+ggi_freq,134376374208428),0,procedure,u
+ser:controlla_messaggi_freq/0,0))
+[STEP EXIT] controlla_messaggi_freq
+[STEP ENTER] svuota_coda_priority
+[STEP EXIT] svuota_coda_priority
+[STEP ENTER] prendi_action_normal
+[STEP EXIT] prendi_action_normal
+[STEP ENTER] controlla_vita
+[STEP EXIT] controlla_vita
+[STEP EXIT] external
+[STEP ENTER] forced_monitor_tick
+[STEP EXIT] forced_monitor_tick
+[STEP ENTER] side_goal
+[STEP EXIT] side_goal
+[CORE LOOP]
+

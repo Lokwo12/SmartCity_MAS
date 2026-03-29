@@ -1,0 +1,18 @@
+Launching agent instance:
+control_center.txt
+SICStus 4.6.0 (x86_64-linu
+x-glibc2.17): Mon Apr  6 0
+9:23:37 PDT 2020
+Licensed to studentSP4.6cc
+.univaq.it
+..................   Activ
+ed Agent control_center ..
+.................
+[CC] full sb1
+[CC] dsp r=1 sb1->t1
+[CC] full sb2
+[CC] dsp r=2 sb2->t1
+[CC] acc r=1 sb1 t1
+[CC] ref r=2 sb2 t1
+[CC] dsp r=2 sb2->t2
+

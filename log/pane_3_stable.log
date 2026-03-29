@@ -1,0 +1,14 @@
+Launching agent instance:
+smart_bin1.txt
+SICStus 4.6.0 (x86_64-linu
+x-glibc2.17): Mon Apr  6 0
+9:23:37 PDT 2020
+Licensed to studentSP4.6cc
+.univaq.it
+! Existence error in user:
+exists_file/1
+! procedure user:exists_fi
+le/1 does not exist
+! goal:  user:exists_file(
+'tmp/smart_bin1.ple')
+| ?-

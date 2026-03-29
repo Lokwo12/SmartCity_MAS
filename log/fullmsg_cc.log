@@ -1,0 +1,47 @@
+Launching agent instance:
+control_center.txt
+SICStus 4.6.0 (x86_64-linu
+x-glibc2.17): Mon Apr  6 0
+9:23:37 PDT 2020
+Licensed to studentSP4.6cc
+.univaq.it
+..................   Activ
+ed Agent control_center ..
+.................
+[CONTROL_CENTER] BIN_FULL
+received from bin=smart_bi
+n1
+[CONTROL_CENTER] DISPATCH
+request=1 bin=smart_bin1 t
+ruck=truck1
+[CONTROL_CENTER] ACCEPT re
+quest=1 bin=smart_bin1 tru
+ck=truck1
+[CONTROL_CENTER] ASSIGNMEN
+T_ACK request=1 bin=smart_
+bin1 truck=truck1
+[CONTROL_CENTER] COLLECTIO
+N_COMPLETE request=1 bin=s
+mart_bin1 truck=truck1
+[CONTROL_CENTER] BIN_FULL
+received from bin=smart_bi
+n2
+[CONTROL_CENTER] DISPATCH
+request=2 bin=smart_bin2 t
+ruck=truck2
+[CONTROL_CENTER] BIN_FULL
+received from bin=smart_bi
+n3
+[CONTROL_CENTER] DISPATCH
+request=3 bin=smart_bin3 t
+ruck=truck3
+[CONTROL_CENTER] RESET_ACK
+ request=1 bin=smart_bin1
+truck=truck1 -> closed
+[CONTROL_CENTER] BIN_FULL
+received from bin=smart_bi
+n1
+[CONTROL_CENTER] DISPATCH
+request=4 bin=smart_bin1 t
+ruck=truck1
+

@@ -1,0 +1,116 @@
+Launching agent instance:
+logger.txt
+SICStus 4.6.0 (x86_64-linu
+x-glibc2.17): Mon Apr  6 0
+9:23:37 PDT 2020
+Licensed to studentSP4.6cc
+.univaq.it
+..................   Activ
+ed Agent logger ..........
+.........
+[LOG-info] 9504 [smart_bin
+1] -> level_update
+[LOG-info] 10885 [smart_bi
+n1] -> level_update
+[LOG-info] 12085 [smart_bi
+n1] -> level_update
+[LOG-info] 13309 [smart_bi
+n1] -> level_update
+[LOG-info] 13421 [smart_bi
+n2] -> level_update
+[LOG-info] 14649 [smart_bi
+n2] -> level_update
+[LOG-info] 15065 [smart_bi
+n1] -> level_update
+[LOG-info] 16301 [smart_bi
+n1] -> level_update
+[LOG-info] 16694 [smart_bi
+n2] -> level_update
+[LOG-info] 17929 [smart_bi
+n2] -> level_update
+[LOG-info] 19147 [smart_bi
+n2] -> level_update
+[LOG-info] 19356 [smart_bi
+n1] -> level_update
+[LOG-info] 20570 [smart_bi
+n1] -> level_update
+[LOG-info] 20971 [smart_bi
+n2] -> level_update
+[LOG-info] 22172 [smart_bi
+n2] -> level_update
+[LOG-info] 22265 [smart_bi
+n1] -> level_update
+[LOG-info] 22267 [smart_bi
+n3] -> level_update
+[LOG-info] 23470 [smart_bi
+n1] -> level_update
+[LOG-info] 24194 [smart_bi
+n1] -> bin_full
+[LOG-info] 24850 [smart_bi
+n1] -> level_update
+[LOG-info] 24851 [control_
+center] -> event(request_o
+pened,req(1),bin(smart_bin
+1),truck(none),note(accept
+ed))
+[LOG-info] 25352 [control_
+center] -> event(pickup_re
+quest_sent,req(1),bin(smar
+t_bin1),truck(truck1),note
+(awaiting_reply))
+[LOG-warn] 26111 [control_
+center] -> event(duplicate
+_bin_full,req(0),bin(smart
+_bin1),truck(none),note(ig
+nored))
+[LOG-info] 26821 [smart_bi
+n1] -> level_update
+[LOG-info] 26823 [smart_bi
+n3] -> level_update
+[LOG-info] 27548 [smart_bi
+n2] -> level_update
+[LOG-info] 28251 [control_
+center] -> event(assignmen
+t_sent,req(1),bin(smart_bi
+n1),truck(truck1),note(awa
+iting_assign_ack))
+[LOG-info] 29064 [smart_bi
+n1] -> level_update
+[LOG-info] 29074 [smart_bi
+n2] -> level_update
+[LOG-info] 29681 [smart_bi
+n2] -> bin_full
+[LOG-info] 30201 [smart_bi
+n3] -> level_update
+[LOG-info] 30680 [smart_bi
+n1] -> level_update
+[LOG-info] 30681 [control_
+center] -> event(assignmen
+t_acked,req(1),bin(smart_b
+in1),truck(truck1),note(aw
+aiting_completion))
+[LOG-info] 31406 [smart_bi
+n3] -> level_update
+[LOG-info] 31807 [smart_bi
+n1] -> collection_complete
+[LOG-info] 32582 [smart_bi
+n1] -> level_update
+[LOG-info] 32584 [control_
+center] -> event(reset_sen
+t,req(1),bin(smart_bin1),t
+ruck(truck1),note(awaiting
+_reset_ack))
+[LOG-info] 33321 [smart_bi
+n1] -> bin_reset
+[LOG-info] 34191 [smart_bi
+n3] -> level_update
+[LOG-info] 34709 [smart_bi
+n1] -> level_update
+[LOG-info] 34717 [smart_bi
+n3] -> bin_full
+[LOG-info] 35893 [control_
+center] -> event(request_o
+pened,req(2),bin(smart_bin
+2),truck(none),note(accept
+ed))
+

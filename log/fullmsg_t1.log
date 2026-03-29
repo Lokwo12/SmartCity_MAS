@@ -1,0 +1,26 @@
+Launching agent instance:
+truck1.txt
+SICStus 4.6.0 (x86_64-linu
+x-glibc2.17): Mon Apr  6 0
+9:23:37 PDT 2020
+Licensed to studentSP4.6cc
+.univaq.it
+..................   Activ
+ed Agent truck1 ..........
+.........
+[TRUCK truck1] PICKUP_ACCE
+PTED bin=smart_bin1 reques
+t=1
+[TRUCK truck1] ASSIGNMENT_
+RECEIVED bin=smart_bin1 re
+quest=1
+[TRUCK truck1] MOVE_DONE b
+in=smart_bin1 request=1
+[TRUCK truck1] COLLECT_DON
+E bin=smart_bin1 request=1
+[TRUCK truck1] SUCCESS bin
+=smart_bin1 request=1
+[TRUCK truck1] PICKUP_ACCE
+PTED bin=smart_bin1 reques
+t=4
+

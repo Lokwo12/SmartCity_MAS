@@ -85,6 +85,7 @@ user:term_expansion((H:at(B)),[],[],(ct(H,B)),[],[]).
 
 :-dynamic eve/1.
 :-dynamic eve_cond/1.
+:-dynamic rx_trace/1.
 :-['utils.pl'].
 
 start0(FI):-set_prolog_flag(redefine_warnings,off),
@@ -178,6 +179,9 @@ start1(Fe,AgentName,Libr,Fil):-
   ass_stringhe_mul(FilePlv),
 
   compile(FilePlv),
+
+        % Run bootstrap again after compilation so agent evi(start)/monitor rules exist.
+        bootstrap_autonomous_start,
 
   apri_learn(FileTxt),
   start_learn,
@@ -705,14 +709,34 @@ man_go:-setof(X,clause_man(X),L),
 
 %RICEZIONE EVENTI ESTERNI%
 ricmess:-clause(agente(Ag,Ind,_,_),_),
-         if(rd_noblock(message(Ind,Ag,IndM,AgM,Language,Ontology,Con)),
-         ricmess0(Ag,Ind,AgM,IndM,Language,Ontology,Con),true).
+         if(in_noblock(message(_,Ag,IndM,AgM,Language,Ontology,Con)),
+         ricmess0(Ag,Ind,AgM,IndM,Language,Ontology,Con),
+         true),
+         if(in_noblock(message2(Ag,AgM,Con)),
+         ricmess2(Ag,AgM,Con),true).
 
 
 ricmess0(Ag,Ind,AgM,IndM,Language,Ontology,Con):-
           asse_cosa(ext_agent(AgM,IndM,Ontology,Language)),
-          in_noblock(message(Ind,Ag,IndM,AgM,Language,Ontology,Con)),
+          maybe_log_rx(Ag,AgM,Con),
           if(clause(receive(Con),_),chiama_con(AgM,IndM,Language,Ontology,Con),not_receivable_meta(AgM,IndM,Language,Ontology,Con)).
+
+ricmess2(Ag,AgM,Con):-
+          Language=italian,
+          Ontology=[],
+          IndM=local,
+          asse_cosa(ext_agent(AgM,IndM,Ontology,Language)),
+          maybe_log_rx(Ag,AgM,Con),
+          if(clause(receive(Con),_),chiama_con(AgM,IndM,Language,Ontology,Con),not_receivable_meta(AgM,IndM,Language,Ontology,Con)).
+
+rx_trace(off).
+
+maybe_log_rx(To,From,Con):-
+          clause(rx_trace(on),_),
+          !,
+          compact_msg(Con,Summary),
+          format('[RX] to=~w from=~w msg=~w~n',[To,From,Summary]).
+maybe_log_rx(_,_,_).
 
 chiama_con(AgM,IndM,Language,Ontology,Con):-if(receive(Con),true,not_receivable_message(AgM,IndM,Language,Ontology,Con)).
 
@@ -1007,10 +1031,18 @@ keep_action1:-findall(azione(X,Ag),clause(do_action(X,Ag),_),L),
                            retractall(azione(Az,Ag)),
 
                            statistics(walltime,[Te,_]),
-                           clause(action(Az,Mod),_),
-                           if(Mod=high,assert(high_action(Az,Te,Ag)),assert(normal_action(Az,Te,Ag))),
+                           ( clause(action(Az,Mod),_) -> true ; Mod=normal ),
+                                          functor(Az,Faz,_),
+                                   if(is_trace_action_functor(Faz),true,
+                                                  if(Mod=high,assert(high_action(Az,Te,Ag)),assert(normal_action(Az,Te,Ag)))),
 
                           Me==U,!.
+
+is_trace_action_functor(F):-
+          atom(F),
+          atom_chars(F,Cs),
+          atom_chars(comm_trace,Prefix),
+          append(Prefix,_,Cs).
 
 %SVUOTA LA CODA DELLE AZIONI AD ALTA PRIORITA'%
 svuota_coda_priority:-if(clause(high_action(_,_,_),_),svuota_coda_priority1,true).
@@ -1061,7 +1093,7 @@ look_up_evento(X):-clause(past(X,_,_),_).
 set_past_evento(X,C):-retractall(past_event_life(X,_)),retractall(past_event_mod(X,_,_)),retractall(past_event_mod(X,_,_,_)),assert(C).
 
 
-em_mess0(X,T,Ag):-if(clause(mod(X,check),_),check_msg(X,T,Ag),em_mess(X)).
+em_mess0(X,_,_):-em_mess(X).
 check_msg(X,T,Ag):-arg(1,X,To),arg(2,X,M),
 
               if(call(send(To,M)),(ver_az_int(X,T,Ag),!),not_sendable_message(To,M)).
@@ -1086,16 +1118,19 @@ send_m(To,M):-clause(agente(S,IndS,_,_),_),
             if(To=all,manda_a_all(M,S,IndS),if(To=room,manda_a_room(M,S,IndS),manda_a(To,M,S,IndS))).
 
 manda_a(To,M,S,IndS):-
-                        %print('testing agent active...'),print(rd_noblock(agente_attivo(To,IndTo))),nl,
-                        if(rd_noblock(agente_attivo(To,IndTo)),
-                                emetti_ms(To,M,S,IndS,IndTo),
-                                print('Message addressed to a not active agent')),nl.
+                                                                ( rd_noblock(agente_attivo(To,IndTo))
+                                                                -> true
+                                                                ;  IndTo=unknown,
+                                                                        write('[WARN] agente_attivo missing for '),write(To),nl
+                                                                ),
+                                                                emetti_ms(To,M,S,IndS,IndTo).
 
 %% Azione di invio del messaggio
 emetti_ms(To,M,S,IndS,IndTo):-clause(own_language(Lang),_),
           invia_terms_ontology(O),
           out(message(IndTo,To,IndS,S,Lang,O,M)),
-          %print(send_message_to(To,M,Lang,O)),nl,
+          out(flow(To,S,M)),
+          true,
           save_on_log_file(send_message(M)).
 
 invia_terms_ontology(O):-
@@ -1198,15 +1233,16 @@ asser_prov(Me):-if(clause(prov_int(Me),_),true,assert(prov_int(Me))).
 scarica_prov(Me):-if(clause(prov_int(Me),_),retractall(prov_int(Me)),true).
 
 ev_int0:-if(clause(prov_int(_),_),ev_int01,true).
-ev_int01:-findall(M,prov_int(M),L),
+ev_int01:-findall(M,prov_int(M),L),ev_int01_list(L).
 
-         last(L,U),
-         repeat,
-           member(Me,L),
-             clause(internal_event(Me,_,_,_,C),_),
-             functor(C,F,_),
-             if(F=forever,carica(Me),ev_int011(Me,F,C)),
-        Me==U,!.
+ev_int01_list([]):-true.
+ev_int01_list([Me|Rest]):-ev_int01_item(Me),ev_int01_list(Rest).
+
+ev_int01_item(Me):-
+                                                 clause(internal_event(Me,_,_,_,C),_),!,
+                                                 functor(C,F,_),
+                                                 if(F=forever,carica(Me),ev_int011(Me,F,C)).
+ev_int01_item(_).
 
 ev_int011(Me,C0,C):-if(C0=until_cond,esamina_cd(Me,C),ev_int012(Me,C0,C)).
 ev_int012(Me,C0,C):-if(C0=in_date,esamina_dt(Me,C),print('Writing_error1')).
@@ -1753,7 +1789,20 @@ exist_event(X):-clause(agente(_,_,F,_),_),extern(F,X).
 
 
 %LEGGE LE LISTE DEGLI EVENTI SU FILE .PLE%
-leggiriga(F,N):-see(F),read(T),if(N=1,chiudi1(T),leggiriga2(N)).
+leggiriga(F,N):-resolve_agent_source_file(F,F0),see(F0),read(T),if(N=1,chiudi1(T),leggiriga2(N)).
+
+resolve_agent_source_file(F,F):-file_available(F),!.
+resolve_agent_source_file(F,Txt):-
+        atom_concat(Base,'.ple',F),
+        atom_concat(Base,'.txt',Txt),
+        file_available(Txt),!.
+resolve_agent_source_file(F,Plv):-
+        atom_concat(Base,'.ple',F),
+        atom_concat(Base,'.plv',Plv),
+        file_available(Plv),!.
+resolve_agent_source_file(F,F).
+
+file_available(F):-catch((open(F,read,S,[]),close(S)),_,fail).
 
         leggiriga2(N):-read(T),if(N=2,chiudi2(T),leggiriga3(N)).
 

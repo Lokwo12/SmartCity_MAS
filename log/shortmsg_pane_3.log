@@ -1,0 +1,20 @@
+Launching agent instance:
+smart_bin1.txt
+SICStus 4.6.0 (x86_64-linu
+x-glibc2.17): Mon Apr  6 0
+9:23:37 PDT 2020
+Licensed to studentSP4.6cc
+.univaq.it
+[SMARTBIN smart_bin1] star
+tI fired
+[SB sb1] start
+..................   Activ
+ed Agent smart_bin1 ......
+.............
+[SB sb1] lvl=20%
+[SB sb1] lvl=40%
+[SB sb1] lvl=60%
+[SB sb1] lvl=80%
+[SB sb1] lvl=100%
+[SB sb1] FULL
+

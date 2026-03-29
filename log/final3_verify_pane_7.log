@@ -1,0 +1,96 @@
+Launching agent instance:
+truck2.txt
+SICStus 4.6.0 (x86_64-linu
+x-glibc2.17): Mon Apr  6 0
+9:23:37 PDT 2020
+Licensed to studentSP4.6cc
+.univaq.it
+..................   Activ
+ed Agent truck2 ..........
+.........
+[TRUCK truck2] state: idle
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(pickup_request(smart_
+bin2,2,city_token_2026),co
+ntrol_center)
+comm_tracedispatchpickup_r
+equest(smart_bin2,2,city_t
+oken_2026)control_center
+[TRUCK truck2] pickup requ
+est accepted for smart_bin
+2
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,2,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,2,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,2,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,2,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,2,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,2,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin2,2,city_t
+oken_2026)control_center
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+[TRUCK truck2] state: wait
+ing_assignment
+

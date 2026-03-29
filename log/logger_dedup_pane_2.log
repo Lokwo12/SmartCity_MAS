@@ -1,0 +1,30 @@
+Launching agent instance:
+logger.txt
+SICStus 4.6.0 (x86_64-linu
+x-glibc2.17): Mon Apr  6 0
+9:23:37 PDT 2020
+Licensed to studentSP4.6cc
+.univaq.it
+! Syntax error in read/2
+! , or ) expected in argum
+ents
+! in line 1
+! eve ( log ( log ( Level
+, Event , Sender ) ) ) :>
+statistics ( walltime , [
+T , _ ] ) , assert ( log_s
+tore ( T , Sender , Event
+, Level ) ) ,  ( a ( shoul
+d_print ( k ( Level , Send
+er , Event ) )
+! <<here>>
+! -> write ( '\'\'\'[LOG-\
+'\'\'' ) , write ( Level )
+ , write ( '\'\'\'] \'\'\'
+' ) , write ( T ) , write
+( '\'\'\' [\'\'\'' ) , wri
+te ( Sender ) , write ( '\
+'\'\'] -> \'\'\'' ) , writ
+e ( Event ) , nl ; true )
+) .
+| ?-

@@ -1,12 +1,27 @@
 :- dynamic truck_state/1, current_job/2, started/0, status_counter/1, assign_wait_counter/1.
 :- dynamic seen_pickup/1, seen_assignment/1, completed_local/1.
+:- dynamic last_monitor_ts/1.
+:- dynamic busy_logged_req/1.
+:- dynamic move_counter/1, collect_counter/1.
 
 deltaT(4).
-
 move_time(3).
 collect_time(3).
-assign_wait_limit(3).
+assign_wait_limit(6).
 shared_token(city_token_2026).
+monitor_interval_ms(1000).
+
+short_bin_id(Bin,Short) :-
+    atom_concat(smart_bin,N,Bin),
+    !,
+    atom_concat(sb,N,Short).
+short_bin_id(Bin,Bin).
+
+short_truck_id(Truck,Short) :-
+    atom_concat(truck,N,Truck),
+    !,
+    atom_concat(t,N,Short).
+short_truck_id(Truck,Truck).
 
 startI :>
     retractall(started),
@@ -17,35 +32,61 @@ startI :>
     retractall(seen_pickup(_)),
     retractall(seen_assignment(_)),
     retractall(completed_local(_)),
+    retractall(busy_logged_req(_)),
+    retractall(move_counter(_)),
+    retractall(collect_counter(_)),
+    retractall(last_monitor_ts(_)),
     assert(truck_state(idle)),
     deltaT(D),
     retractall(status_counter(_)),
-    assert(status_counter(D)).
+    assert(status_counter(D)),
+    statistics(walltime,[Now,_]),
+    assert(last_monitor_ts(Now)).
 
 status_checkI :>
-    truck_state(S),
-    agent(T),
-    write('[TRUCK '), write(T), write('] state: '), write(S), nl.
+    true.
 
 send_message(request(pickup(Bin),_),_From) :-
-    evi(pickup_request(Bin,0)).
+    fire_event(pickup_request(Bin,0)).
 
 send_message(pickup_request(Bin),_From) :-
-    evi(pickup_request(Bin,0)).
+    fire_event(pickup_request(Bin,0)).
 
 send_message(pickup_request(Bin,ReqId,Token),control_center) :-
     shared_token(Token),
-    evi(pickup_request(Bin,ReqId)).
+    fire_event(pickup_request(Bin,ReqId)).
 
 send_message(confirm(assignment(Bin),_),_From) :-
-    evi(assignment(Bin,0)).
+    fire_event(assignment(Bin,0)).
 
 send_message(assignment(Bin),_From) :-
-    evi(assignment(Bin,0)).
+    fire_event(assignment(Bin,0)).
 
 send_message(assignment(Bin,ReqId,Token),control_center) :-
     shared_token(Token),
-    evi(assignment(Bin,ReqId)).
+    fire_event(assignment(Bin,ReqId)).
+
+send_message(assignment(Bin,ReqId),control_center) :-
+    fire_event(assignment(Bin,ReqId)).
+
+fire_event(E) :-
+    ( catch(call(eve(E)),_,fail)
+    ; catch(call(evi(E)),_,fail)
+    ), !.
+fire_event(_).
+
+pickup_requestE(Bin,ReqId) :>
+    ReqId > 0,
+    completed_local(ReqId),
+    !,
+    true.
+
+pickup_requestE(Bin,ReqId) :>
+    ReqId > 0,
+    seen_pickup(ReqId),
+    \+ current_job(Bin,ReqId),
+    !,
+    true.
 
 pickup_requestE(Bin,ReqId) :>
     seen_pickup(ReqId),
@@ -58,25 +99,43 @@ pickup_requestE(Bin,ReqId) :>
     messageA(control_center, send_message(job_accept(T,Bin,ReqId,Token),T), T).
 
 pickup_requestE(Bin,ReqId) :>
-    (truck_state(busy); truck_state(waiting_assignment)),
+    truck_state(S),
+    S \= idle,
+    ReqId > 0,
+    \+ busy_logged_req(ReqId),
+    assert(busy_logged_req(ReqId)),
     !,
     agent(T),
-    write('[TRUCK '), write(T), write('] pickup request while busy for '), write(Bin), nl,
+    format('[TRUCK ~w] PICKUP_BUSY bin=~w request=~w~n',[T,Bin,ReqId]),
+    send_refuseA(T,Bin,ReqId).
+
+pickup_requestE(Bin,ReqId) :>
+    truck_state(S),
+    S \= idle,
+    !,
+    agent(T),
     send_refuseA(T,Bin,ReqId).
 
 pickup_requestE(Bin,ReqId) :>
     truck_state(idle),
     agent(T),
-    write('[TRUCK '), write(T), write('] pickup request accepted for '), write(Bin), nl,
+    format('[TRUCK ~w] PICKUP_ACCEPTED bin=~w request=~w~n',[T,Bin,ReqId]),
     retract(truck_state(idle)),
-    assert(truck_state(waiting_assignment)),
+    assert(truck_state(moving)),
     retractall(current_job(_,_)),
-    assign_wait_limit(W),
-    retractall(assign_wait_counter(_)),
-    assert(assign_wait_counter(W)),
     assert(current_job(Bin,ReqId)),
+    move_time(M),
+    retractall(move_counter(_)),
+    assert(move_counter(M)),
+    format('[TRUCK ~w] MOVE_START bin=~w request=~w eta=~ws~n',[T,Bin,ReqId,M]),
     mark_seen_pickupA(ReqId),
     send_acceptA(T,Bin,ReqId).
+
+assignmentE(Bin,ReqId) :>
+    ReqId > 0,
+    completed_local(ReqId),
+    !,
+    true.
 
 assignmentE(Bin,ReqId) :>
     ReqId > 0,
@@ -91,58 +150,49 @@ assignmentE(Bin,ReqId) :>
     current_job(Bin,ReqId),
     !,
     agent(T),
+    format('[TRUCK ~w] ASSIGNMENT_RECEIVED bin=~w request=~w~n',[T,Bin,ReqId]),
     retractall(assign_wait_counter(_)),
     retractall(truck_state(_)),
-    assert(truck_state(busy)),
+    assert(truck_state(moving)),
+    move_time(M),
+    retractall(move_counter(_)),
+    assert(move_counter(M)),
+    format('[TRUCK ~w] MOVE_START bin=~w request=~w eta=~ws~n',[T,Bin,ReqId,M]),
     mark_assignment_ackA(T,Bin,ReqId),
-    schedule_moveA(Bin,ReqId).
+    true.
 
 assignmentE(_,_) :> true.
-
-schedule_moveA(Bin,ReqId) :-
-    move_time(_),
-    evi(move_done(Bin,ReqId)).
-
-move_doneI(Bin,ReqId) :>
-    agent(T),
-    write('[TRUCK '), write(T), write('] move done for '), write(Bin), nl,
-    schedule_collectA(Bin,ReqId).
-
-schedule_collectA(Bin,ReqId) :-
-    collect_time(_),
-    evi(collect_done(Bin,ReqId)).
-
-collect_doneI(Bin,ReqId) :>
-    agent(T),
-    write('[TRUCK '), write(T), write('] collect done for '), write(Bin), nl,
-    decide_outcomeI(Bin,ReqId).
 
 decide_outcomeI(Bin,ReqId) :>
     random(0,100,R),
     decide_with_rollA(R,Bin,ReqId).
 
 decide_with_rollA(R,Bin,ReqId) :-
-    R < 80,
+    R < 90,
     successA(Bin,ReqId).
 
 decide_with_rollA(R,Bin,ReqId) :-
-    R >= 80,
+    R >= 90,
     failureA(Bin,ReqId).
 
 successA(Bin,ReqId) :-
     agent(T),
+    format('[TRUCK ~w] SUCCESS bin=~w request=~w~n',[T,Bin,ReqId]),
     send_completeA(T,Bin,ReqId),
     mark_completedA(ReqId),
     cleanupA.
 
 failureA(Bin,ReqId) :-
     agent(T),
+    format('[TRUCK ~w] FAILURE bin=~w request=~w~n',[T,Bin,ReqId]),
     send_failedA(T,Bin,ReqId),
     cleanupA.
 
 cleanupA :-
     retractall(current_job(_,_)),
     retractall(assign_wait_counter(_)),
+    retractall(move_counter(_)),
+    retractall(collect_counter(_)),
     retractall(truck_state(_)),
     assert(truck_state(idle)).
 
@@ -150,7 +200,7 @@ assignment_timeoutI :>
     truck_state(waiting_assignment),
     current_job(Bin,ReqId),
     agent(T),
-    write('[TRUCK '), write(T), write('] assignment timeout for '), write(Bin), nl,
+    format('[TRUCK ~w] ASSIGNMENT_TIMEOUT bin=~w request=~w~n',[T,Bin,ReqId]),
     send_refuseA(T,Bin,ReqId),
     cleanupA.
 
@@ -165,7 +215,8 @@ mark_assignment_ackA(T,Bin,ReqId) :-
     ReqId > 0,
     assert(seen_assignment(ReqId)),
     shared_token(Token),
-    messageA(control_center, send_message(assignment_ack(T,Bin,ReqId,Token),T), T).
+    safe_sendA(control_center, send_message(assignment_ack(T,Bin,ReqId,Token),T), T),
+    safe_sendA(control_center, send_message(assignment_ack(T,Bin,ReqId),T), T).
 
 mark_assignment_ackA(_T,_Bin,ReqId) :-
     ReqId =< 0.
@@ -180,8 +231,7 @@ mark_completedA(ReqId) :-
 send_refuseA(T,Bin,ReqId) :-
     ReqId > 0,
     shared_token(Token),
-    messageA(control_center, send_message(job_refuse(T,Bin,ReqId,Token),T), T),
-    messageA(control_center, send_message(job_refuse(T,Bin),T), T).
+    messageA(control_center, send_message(job_refuse(T,Bin,ReqId,Token),T), T).
 
 send_refuseA(T,Bin,ReqId) :-
     ReqId =< 0,
@@ -190,8 +240,7 @@ send_refuseA(T,Bin,ReqId) :-
 send_acceptA(T,Bin,ReqId) :-
     ReqId > 0,
     shared_token(Token),
-    messageA(control_center, send_message(job_accept(T,Bin,ReqId,Token),T), T),
-    messageA(control_center, send_message(job_accept(T,Bin),T), T).
+    messageA(control_center, send_message(job_accept(T,Bin,ReqId,Token),T), T).
 
 send_acceptA(T,Bin,ReqId) :-
     ReqId =< 0,
@@ -200,8 +249,9 @@ send_acceptA(T,Bin,ReqId) :-
 send_completeA(T,Bin,ReqId) :-
     ReqId > 0,
     shared_token(Token),
-    messageA(control_center, send_message(collection_complete(Bin,ReqId,Token),T), T),
-    messageA(control_center, send_message(collection_complete(Bin),T), T).
+    safe_sendA(control_center, send_message(collection_complete(Bin,ReqId,Token),T), T),
+    safe_sendA(control_center, send_message(collection_complete(Bin,ReqId),T), T),
+    safe_sendA(control_center, send_message(collection_complete(Bin),T), T).
 
 send_completeA(T,Bin,ReqId) :-
     ReqId =< 0,
@@ -210,8 +260,14 @@ send_completeA(T,Bin,ReqId) :-
 send_failedA(T,Bin,ReqId) :-
     ReqId > 0,
     shared_token(Token),
-    messageA(control_center, send_message(collection_failed(T,Bin,ReqId,Token),T), T),
-    messageA(control_center, send_message(collection_failed(T,Bin),T), T).
+    safe_sendA(control_center, send_message(collection_failed(T,Bin,ReqId,Token),T), T),
+    safe_sendA(control_center, send_message(collection_failed(T,Bin,ReqId),T), T),
+    safe_sendA(control_center, send_message(collection_failed(T,Bin),T), T).
+
+safe_sendA(To,Msg,From) :-
+    messageA(To,Msg,From),
+    !.
+safe_sendA(_,_,_).
 
 send_failedA(T,Bin,ReqId) :-
     ReqId =< 0,
@@ -223,30 +279,107 @@ monitorI(dummy) :>
 
 monitorI(dummy) :>
     started,
+    statistics(walltime,[Now,_]),
+    last_monitor_ts(Last),
+    monitor_interval_ms(Interval),
+    Now - Last < Interval,
+    !,
+    true.
+
+monitorI(dummy) :>
+    started,
+    statistics(walltime,[Now,_]),
+    last_monitor_ts(Last),
+    monitor_interval_ms(Interval),
+    Now - Last >= Interval,
+    retract(last_monitor_ts(Last)),
+    assert(last_monitor_ts(Now)),
+    monitor_tickA.
+
+monitor_tickA :-
+    tick_status_counterA,
+    tick_assignment_waitA,
+    tick_move_phaseA,
+    tick_collect_phaseA.
+
+tick_status_counterA :-
     status_counter(C),
     C > 1,
     C1 is C - 1,
     retract(status_counter(C)),
-    assert(status_counter(C1)).
+    assert(status_counter(C1)),
+    !.
 
-monitorI(dummy) :>
-    started,
+tick_status_counterA :-
     status_counter(1),
     deltaT(D),
     retract(status_counter(1)),
     assert(status_counter(D)),
-    evi(status_check).
+    evi(status_check),
+    !.
+tick_status_counterA.
 
-monitorI(dummy) :>
+tick_assignment_waitA :-
     truck_state(waiting_assignment),
     assign_wait_counter(C),
     C > 1,
     C1 is C - 1,
     retract(assign_wait_counter(C)),
-    assert(assign_wait_counter(C1)).
+    assert(assign_wait_counter(C1)),
+    !.
 
-monitorI(dummy) :>
+tick_assignment_waitA :-
     truck_state(waiting_assignment),
     assign_wait_counter(1),
     retract(assign_wait_counter(1)),
-    evi(assignment_timeout).
+    evi(assignment_timeout),
+    !.
+tick_assignment_waitA.
+
+tick_move_phaseA :-
+    truck_state(moving),
+    move_counter(C),
+    C > 1,
+    C1 is C - 1,
+    retract(move_counter(C)),
+    assert(move_counter(C1)),
+    !.
+
+tick_move_phaseA :-
+    truck_state(moving),
+    move_counter(1),
+    current_job(Bin,ReqId),
+    agent(T),
+    retract(move_counter(1)),
+    format('[TRUCK ~w] MOVE_DONE bin=~w request=~w~n',[T,Bin,ReqId]),
+    collect_time(Ct),
+    retractall(collect_counter(_)),
+    assert(collect_counter(Ct)),
+    retract(truck_state(moving)),
+    assert(truck_state(collecting)),
+    format('[TRUCK ~w] COLLECT_START bin=~w request=~w eta=~ws~n',[T,Bin,ReqId,Ct]),
+    !.
+tick_move_phaseA.
+
+tick_collect_phaseA :-
+    truck_state(collecting),
+    collect_counter(C),
+    C > 1,
+    C1 is C - 1,
+    retract(collect_counter(C)),
+    assert(collect_counter(C1)),
+    !.
+
+tick_collect_phaseA :-
+    truck_state(collecting),
+    collect_counter(1),
+    current_job(Bin,ReqId),
+    agent(T),
+    retract(collect_counter(1)),
+    format('[TRUCK ~w] COLLECT_DONE bin=~w request=~w~n',[T,Bin,ReqId]),
+    decide_outcomeI(Bin,ReqId),
+    !.
+tick_collect_phaseA.
+
+monitor(dummy) :-
+    evi(monitor(dummy)).

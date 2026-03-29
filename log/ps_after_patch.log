@@ -1,0 +1,18 @@
+  83028  0.0  0.1 tmux new-session -d -s DALI_session -n DALI_MAS "/usr/local/sicstus4.6.0/bin/sicstus" --noinfo -l "/home/studente/SmartCity_MAS/src /active_server_wi.pl" --goal "go(3010,'/home/studente/SmartCity_MAS/server.txt')."
+  83029  0.8  0.5 /usr/local/sicstus4.6.0/bin/sicstus --noinfo -l /home/studente/SmartCity_MAS/src /active_server_wi.pl --goal go(3010,'/home/studente/SmartCity_MAS/server.txt').
+  83101  0.0  0.0 /bin/bash conf/startagent.sh control_center /usr/local/sicstus4.6.0/bin/sicstus /home/studente/SmartCity_MAS/src 
+  83103 23.7  0.8 /usr/local/sicstus4.6.0/bin/sicstus --noinfo -l /home/studente/SmartCity_MAS/src /active_dali_wi.pl --goal start0('conf/mas/control_center.txt').
+  83319  0.0  0.0 /bin/bash conf/startagent.sh logger /usr/local/sicstus4.6.0/bin/sicstus /home/studente/SmartCity_MAS/src 
+  83322 22.7  0.7 /usr/local/sicstus4.6.0/bin/sicstus --noinfo -l /home/studente/SmartCity_MAS/src /active_dali_wi.pl --goal start0('conf/mas/logger.txt').
+  83526  0.0  0.0 /bin/bash conf/startagent.sh smart_bin1 /usr/local/sicstus4.6.0/bin/sicstus /home/studente/SmartCity_MAS/src 
+  83527 19.8  0.7 /usr/local/sicstus4.6.0/bin/sicstus --noinfo -l /home/studente/SmartCity_MAS/src /active_dali_wi.pl --goal start0('conf/mas/smart_bin1.txt').
+  83818  0.0  0.0 /bin/bash conf/startagent.sh smart_bin2 /usr/local/sicstus4.6.0/bin/sicstus /home/studente/SmartCity_MAS/src 
+  83820 17.1  0.7 /usr/local/sicstus4.6.0/bin/sicstus --noinfo -l /home/studente/SmartCity_MAS/src /active_dali_wi.pl --goal start0('conf/mas/smart_bin2.txt').
+  83839  0.0  0.0 /bin/bash conf/startagent.sh smart_bin3 /usr/local/sicstus4.6.0/bin/sicstus /home/studente/SmartCity_MAS/src 
+  83843 16.3  0.7 /usr/local/sicstus4.6.0/bin/sicstus --noinfo -l /home/studente/SmartCity_MAS/src /active_dali_wi.pl --goal start0('conf/mas/smart_bin3.txt').
+  83931  0.0  0.0 /bin/bash conf/startagent.sh truck1 /usr/local/sicstus4.6.0/bin/sicstus /home/studente/SmartCity_MAS/src 
+  83934 14.8  0.8 /usr/local/sicstus4.6.0/bin/sicstus --noinfo -l /home/studente/SmartCity_MAS/src /active_dali_wi.pl --goal start0('conf/mas/truck1.txt').
+  84157  0.0  0.0 /bin/bash conf/startagent.sh truck2 /usr/local/sicstus4.6.0/bin/sicstus /home/studente/SmartCity_MAS/src 
+  84160 13.4  0.8 /usr/local/sicstus4.6.0/bin/sicstus --noinfo -l /home/studente/SmartCity_MAS/src /active_dali_wi.pl --goal start0('conf/mas/truck2.txt').
+  84377  0.0  0.0 /bin/bash conf/startagent.sh truck3 /usr/local/sicstus4.6.0/bin/sicstus /home/studente/SmartCity_MAS/src 
+  84379 87.5  0.8 /usr/local/sicstus4.6.0/bin/sicstus --noinfo -l /home/studente/SmartCity_MAS/src /active_dali_wi.pl --goal start0('conf/mas/truck3.txt').

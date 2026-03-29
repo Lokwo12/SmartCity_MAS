@@ -1,21 +1,48 @@
 :- dynamic log_store/4, started/0.
+:- dynamic recent_log/2.
+
+dedup_window_ms(1200).
 
 startI :>
     retractall(started),
     assert(started),
-    retractall(log_store(_,_,_,_)).
+    retractall(log_store(_,_,_,_)),
+    retractall(recent_log(_,_)).
+
+should_printA(Key) :-
+    statistics(walltime,[Now,_]),
+    dedup_window_ms(W),
+    recent_log(Key,Prev),
+    Now - Prev < W,
+    !,
+    false.
+
+should_printA(Key) :-
+    statistics(walltime,[Now,_]),
+    retractall(recent_log(Key,_)),
+    assert(recent_log(Key,Now)),
+    true.
 
 logE(log(Level,Event,Sender)) :>
     statistics(walltime, [T,_]),
     assert(log_store(T,Sender,Event,Level)),
+    should_printA(k(Level,Sender,Event)),
+    !,
     write('[LOG-'), write(Level), write('] '),
     write(T), write(' ['),
     write(Sender), write('] -> '),
     write(Event), nl.
 
+logE(log(Level,Event,Sender)) :>
+    statistics(walltime, [T,_]),
+    assert(log_store(T,Sender,Event,Level)),
+    true.
+
 logE(log(Level,event(Name,req(ReqId),bin(Bin),truck(Truck),note(Note)),Sender)) :>
     statistics(walltime, [T,_]),
     assert(log_store(T,Sender,event(Name,req(ReqId),bin(Bin),truck(Truck),note(Note)),Level)),
+    should_printA(k(Level,Sender,event(Name,ReqId,Bin,Truck,Note))),
+    !,
     write('[LOG-'), write(Level), write('] '),
     write(T), write(' ['), write(Sender), write('] '),
     write(Name), write(' req='), write(ReqId),
@@ -23,15 +50,37 @@ logE(log(Level,event(Name,req(ReqId),bin(Bin),truck(Truck),note(Note)),Sender)) 
     write(' truck='), write(Truck),
     write(' note='), write(Note), nl.
 
+logE(log(Level,event(Name,req(ReqId),bin(Bin),truck(Truck),note(Note)),Sender)) :>
+    statistics(walltime, [T,_]),
+    assert(log_store(T,Sender,event(Name,req(ReqId),bin(Bin),truck(Truck),note(Note)),Level)),
+    true.
+
 logE(log(error,Event,Sender)) :>
+    should_printA(k(error,Sender,Event)),
+    !,
     write('[ALERT] '), write(Sender),
     write(' -> '), write(Event), nl.
 
+logE(log(error,_Event,_Sender)) :>
+    true.
+
 send_message(inform(log(Level,Event,Sender),_),_From) :-
-    evi(log(Level,Event,Sender)).
+    fire_event(log(log(Level,Event,Sender))).
 
 send_message(log(Level,Event,Sender),_From) :-
-    evi(log(Level,Event,Sender)).
+    fire_event(log(log(Level,Event,Sender))).
+
+send_message(send_message(log(Level,Event,Sender),_),_From) :-
+    fire_event(log(log(Level,Event,Sender))).
+
+send_message(send_message(inform(log(Level,Event,Sender),_),_),_From) :-
+    fire_event(log(log(Level,Event,Sender))).
+
+fire_event(E) :-
+    ( catch(call(eve(E)),_,fail)
+    ; catch(call(evi(E)),_,fail)
+    ), !.
+fire_event(_).
 
 monitorI(dummy) :>
     started.
@@ -39,3 +88,6 @@ monitorI(dummy) :>
 monitorI(dummy) :>
     \+ started,
     evi(start).
+
+monitor(dummy) :-
+    evi(monitor(dummy)).

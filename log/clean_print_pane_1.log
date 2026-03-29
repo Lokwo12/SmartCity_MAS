@@ -1,0 +1,39 @@
+Launching agent instance:
+control_center.txt
+SICStus 4.6.0 (x86_64-linu
+x-glibc2.17): Mon Apr  6 0
+9:23:37 PDT 2020
+Licensed to studentSP4.6cc
+.univaq.it
+..................   Activ
+ed Agent control_center ..
+.................
+[CC] bin_full from=smart_b
+in1
+[CC] candidates for smart_
+bin1: [truck1,truck2,truck
+3]
+[CC] dispatch req=1 bin=sm
+art_bin1 truck=truck1
+[CC] bin_full from=smart_b
+in2
+[CC] candidates for smart_
+bin2: [truck1,truck2,truck
+3]
+[CC] dispatch req=2 bin=sm
+art_bin2 truck=truck1
+[CC] bin_full from=smart_b
+in3
+[CC] candidates for smart_
+bin3: [truck1,truck2,truck
+3]
+[CC] dispatch req=3 bin=sm
+art_bin3 truck=truck1
+[CC] bin_full from=smart_b
+in1
+[CC] candidates for smart_
+bin1: [truck1,truck2,truck
+3]
+[CC] dispatch req=4 bin=sm
+art_bin1 truck=truck1
+

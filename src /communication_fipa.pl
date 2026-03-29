@@ -5,13 +5,41 @@
 
 :-dynamic isa/3.
 
-comm_trace(on).
+comm_trace(off).
+
+% Compatibility bridge using real Prolog variables.
+% Some legacy clauses below use var_* placeholders as atoms.
+log_comm(Tag,X,Ag) :-
+    comm_trace(on),
+    !,
+    write(comm),
+    write(Tag),
+    write(from),
+    write(Ag),
+    write(payload),
+    write(X),
+    nl.
+log_comm(_,_,_).
+
+safe_told(Ag, M) :-
+    ( current_predicate(told/2) -> told(Ag, M) ; true ).
+
+safe_told(Ag, M, T) :-
+    ( current_predicate(told/3) -> told(Ag, M, T) ; T = 0 ).
+
+safe_tell(To, Ag, M) :-
+    ( current_predicate(tell/3) -> tell(To, Ag, M) ; true ).
 
 log_comm(var_Tag,var_X,var_Ag) :-
     comm_trace(on),
     !,
-    write(comm_trace),write(var_Tag),
-    write(var_X),write(var_Ag),nl.
+    write(comm),
+    write(var_Tag),
+    write(from),
+    write(var_Ag),
+    write(payload),
+    write(var_X),
+    nl.
 log_comm(_,_,_).
 
 safe_told(var_Ag, var_M) :-
@@ -22,6 +50,16 @@ safe_told(var_Ag, var_M, var_T) :-
 
 safe_tell(var_To, var_Ag, var_M) :-
     ( current_predicate(tell/3) -> tell(var_To, var_Ag, var_M) ; true ).
+
+% Runtime-safe bridge clauses with real variables.
+% The legacy var_* clauses can remain, but these ensure actual message terms match.
+receive(send_message(X,Ag)) :-
+    safe_told(Ag,send_message(X)),
+    call_send_message(X,Ag).
+
+send(To,send_message(X,Ag)) :-
+    safe_tell(To,Ag,send_message(X)),
+    send_m(To,send_message(X,Ag)).
 
 receive(send_message(var_X,var_Ag)):-safe_told(var_Ag,send_message(var_X)),call_send_message(var_X,var_Ag).
 
@@ -90,13 +128,13 @@ send(var_To,execute_proc(var_X,var_Ag)):-safe_tell(var_To,var_Ag,execute_proc(va
 send(var_To,agree(var_X,var_Ag)):-safe_tell(var_To,var_Ag,agree(var_X)),send_m(var_To,agree(var_X,var_Ag)).
 
 
-call_send_message(var_X,var_Ag):-
-    ( nonvar(var_X) ->
-        log_comm(dispatch,var_X,var_Ag),
-        ( nonvar(var_Ag), var_Ag \= self ->
-            send_message(var_X,var_Ag)
-        ;
-            send_message(var_X,_)
+call_send_message(X,Ag):-
+    ( nonvar(X) ->
+        log_comm(dispatch,X,Ag),
+        ( (nonvar(Ag), Ag \= self, catch(send_message(X,Ag),_,fail))
+        ; catch(send_message(X,_),_,fail)
+        ; catch(call(evi(X)),_,fail)
+        ; true
         )
     ;
         true

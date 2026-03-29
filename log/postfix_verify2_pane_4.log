@@ -1,0 +1,148 @@
+Launching agent instance:
+smart_bin2.txt
+SICStus 4.6.0 (x86_64-linu
+x-glibc2.17): Mon Apr  6 0
+9:23:37 PDT 2020
+Licensed to studentSP4.6cc
+.univaq.it
+[SMARTBIN smart_bin2] star
+tI fired
+..................   Activ
+ed Agent smart_bin2 ......
+.............
+[SMARTBIN smart_bin2] leve
+l=20%
+[SMARTBIN smart_bin2] leve
+l=40%
+[SMARTBIN smart_bin2] leve
+l=60%
+[SMARTBIN smart_bin2] leve
+l=80%
+[SMARTBIN smart_bin2] leve
+l=100%
+[SMARTBIN smart_bin2] FULL
+ -> notify control_center
+[RX CORE] to=smart_bin2 fr
+om=control_center msg=send
+_message(reset_bin(smart_b
+in2,2,city_token_2026),con
+trol_center)
+comm_tracedispatchreset_bi
+n(smart_bin2,2,city_token_
+2026)control_center
+[SMARTBIN smart_bin2] leve
+l=20%
+[SMARTBIN smart_bin2] leve
+l=40%
+[SMARTBIN smart_bin2] leve
+l=60%
+comm_tracedispatchreset_bi
+n(smart_bin2,2,city_token_
+2026)control_center
+[SMARTBIN smart_bin2] leve
+l=80%
+[SMARTBIN smart_bin2] leve
+l=100%
+[SMARTBIN smart_bin2] FULL
+ -> notify control_center
+comm_tracedispatchreset_bi
+n(smart_bin2,2,city_token_
+2026)control_center
+comm_tracedispatchreset_bi
+n(smart_bin2,2,city_token_
+2026)control_center
+comm_tracedispatchreset_bi
+n(smart_bin2,2,city_token_
+2026)control_center
+comm_tracedispatchreset_bi
+n(smart_bin2,2,city_token_
+2026)control_center
+comm_tracedispatchreset_bi
+n(smart_bin2,2,city_token_
+2026)control_center
+comm_tracedispatchreset_bi
+n(smart_bin2,2,city_token_
+2026)control_center
+[RX CORE] to=smart_bin2 fr
+om=control_center msg=send
+_message(reset_bin(smart_b
+in2,5,city_token_2026),con
+trol_center)
+comm_tracedispatchreset_bi
+n(smart_bin2,5,city_token_
+2026)control_center
+[SMARTBIN smart_bin2] leve
+l=20%
+[SMARTBIN smart_bin2] leve
+l=40%
+[SMARTBIN smart_bin2] leve
+l=60%
+comm_tracedispatchreset_bi
+n(smart_bin2,5,city_token_
+2026)control_center
+[SMARTBIN smart_bin2] leve
+l=80%
+[SMARTBIN smart_bin2] leve
+l=100%
+[SMARTBIN smart_bin2] FULL
+ -> notify control_center
+comm_tracedispatchreset_bi
+n(smart_bin2,5,city_token_
+2026)control_center
+comm_tracedispatchreset_bi
+n(smart_bin2,5,city_token_
+2026)control_center
+comm_tracedispatchreset_bi
+n(smart_bin2,5,city_token_
+2026)control_center
+comm_tracedispatchreset_bi
+n(smart_bin2,5,city_token_
+2026)control_center
+comm_tracedispatchreset_bi
+n(smart_bin2,5,city_token_
+2026)control_center
+comm_tracedispatchreset_bi
+n(smart_bin2,5,city_token_
+2026)control_center
+[RX CORE] to=smart_bin2 fr
+om=control_center msg=send
+_message(reset_bin(smart_b
+in2,7,city_token_2026),con
+trol_center)
+comm_tracedispatchreset_bi
+n(smart_bin2,7,city_token_
+2026)control_center
+[SMARTBIN smart_bin2] leve
+l=20%
+[SMARTBIN smart_bin2] leve
+l=40%
+[SMARTBIN smart_bin2] leve
+l=60%
+comm_tracedispatchreset_bi
+n(smart_bin2,7,city_token_
+2026)control_center
+[SMARTBIN smart_bin2] leve
+l=80%
+[SMARTBIN smart_bin2] leve
+l=100%
+[SMARTBIN smart_bin2] FULL
+ -> notify control_center
+comm_tracedispatchreset_bi
+n(smart_bin2,7,city_token_
+2026)control_center
+comm_tracedispatchreset_bi
+n(smart_bin2,7,city_token_
+2026)control_center
+comm_tracedispatchreset_bi
+n(smart_bin2,7,city_token_
+2026)control_center
+comm_tracedispatchreset_bi
+n(smart_bin2,7,city_token_
+2026)control_center
+comm_tracedispatchreset_bi
+n(smart_bin2,7,city_token_
+2026)control_center
+comm_tracedispatchreset_bi
+n(smart_bin2,7,city_token_
+2026)control_center
+

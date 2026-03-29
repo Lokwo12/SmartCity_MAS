@@ -1,0 +1,248 @@
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin3,4,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin3,4,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin3,4,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin3,4,city_t
+oken_2026)control_center
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(assignment(smart_bin3
+,4,city_token_2026),contro
+l_center)
+comm_tracedispatchassignme
+nt(smart_bin3,4,city_token
+_2026)control_center
+[TRUCK truck2] move done f
+or smart_bin3
+[TRUCK truck2] collect don
+e for smart_bin3
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(pickup_request(smart_
+bin1,5,city_token_2026),co
+ntrol_center)
+comm_tracedispatchpickup_r
+equest(smart_bin1,5,city_t
+oken_2026)control_center
+[TRUCK truck2] pickup requ
+est accepted for smart_bin
+1
+comm_tracedispatchpickup_r
+equest(smart_bin1,5,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin1,5,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin1,5,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin1,5,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin1,5,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin1,5,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin1,5,city_t
+oken_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin3,4,city_token
+_2026)control_center
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(assignment(smart_bin1
+,5,city_token_2026),contro
+l_center)
+comm_tracedispatchassignme
+nt(smart_bin1,5,city_token
+_2026)control_center
+[TRUCK truck2] move done f
+or smart_bin1
+[TRUCK truck2] collect don
+e for smart_bin1
+comm_tracedispatchassignme
+nt(smart_bin1,5,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin1,5,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin1,5,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin1,5,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin1,5,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin1,5,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin1,5,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin3,4,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin3,4,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin3,4,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin3,4,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin3,4,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin3,4,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(pickup_request(smart_
+bin2,6,city_token_2026),co
+ntrol_center)
+comm_tracedispatchpickup_r
+equest(smart_bin2,6,city_t
+oken_2026)control_center
+[TRUCK truck2] pickup requ
+est accepted for smart_bin
+2
+comm_tracedispatchpickup_r
+equest(smart_bin2,6,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin2,6,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin2,6,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin2,6,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin2,6,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin2,6,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin2,6,city_t
+oken_2026)control_center
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(assignment(smart_bin2
+,6,city_token_2026),contro
+l_center)
+comm_tracedispatchassignme
+nt(smart_bin2,6,city_token
+_2026)control_center
+[TRUCK truck2] move done f
+or smart_bin2
+[TRUCK truck2] collect don
+e for smart_bin2
+comm_tracedispatchassignme
+nt(smart_bin2,6,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin2,6,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin2,6,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin2,6,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin2,6,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin2,6,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin2,6,city_token
+_2026)control_center
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(pickup_request(smart_
+bin1,8,city_token_2026),co
+ntrol_center)
+comm_tracedispatchpickup_r
+equest(smart_bin1,8,city_t
+oken_2026)control_center
+[TRUCK truck2] pickup requ
+est accepted for smart_bin
+1
+[TRUCK truck2] state: wait
+ing_assignment
+comm_tracedispatchpickup_r
+equest(smart_bin1,8,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin1,8,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin1,8,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin1,8,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin1,8,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin1,8,city_t
+oken_2026)control_center
+comm_tracedispatchpickup_r
+equest(smart_bin1,8,city_t
+oken_2026)control_center
+[RX CORE] to=truck2 from=c
+ontrol_center msg=send_mes
+sage(assignment(smart_bin1
+,8,city_token_2026),contro
+l_center)
+comm_tracedispatchassignme
+nt(smart_bin1,8,city_token
+_2026)control_center
+[TRUCK truck2] move done f
+or smart_bin1
+[TRUCK truck2] collect don
+e for smart_bin1
+comm_tracedispatchassignme
+nt(smart_bin1,8,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin1,8,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin1,8,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin1,8,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin1,8,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin1,8,city_token
+_2026)control_center
+comm_tracedispatchassignme
+nt(smart_bin1,8,city_token
+_2026)control_center
+[TRUCK truck2] state: idle
+[TRUCK truck2] state: idle
+
