@@ -93,7 +93,7 @@ increase_levelA :-
     assert(bin_level(NL)),
     agent(BinId),
     format('[BIN ~w] Level: ~w% -> ~w%~n',[BinId,L,NL]),
-    messageA(logger, log(info,level_update,BinId)),
+    messageA(logger, send_message(log(info,level_update,BinId), BinId)),
     ( NL >= M -> evi(full_trigger) ; true ).
 
 full_triggerI :>
@@ -102,8 +102,8 @@ full_triggerI :>
     agent(BinId),
     format('~n[BIN ~w] *** FULL (100%) *** Sending alert to Control Center~n',[BinId]),
     shared_token(Token),
-    messageA(control_center, bin_full(BinId,Token)),
-    messageA(logger, log(info,bin_full,BinId)).
+    messageA(control_center, send_message(bin_full(BinId,Token), BinId)),
+    messageA(logger, send_message(log(info,bin_full,BinId), BinId)).
 
 reset_binE(Bin,ReqId,Token) :>
     shared_token(Token),
@@ -112,7 +112,7 @@ reset_binE(Bin,ReqId,Token) :>
     !,
     assert(last_reset_req(ReqId)),
     apply_reset_nowA,
-    messageA(control_center, reset_ack(Bin,ReqId,Token)).
+    messageA(control_center, send_message(reset_ack(Bin,ReqId,Token), Bin)).
 
 reset_binE(Bin,ReqId,Token) :>
     shared_token(Token),
@@ -125,13 +125,13 @@ apply_reset_nowA :-
     retractall(bin_state(_)), assert(bin_state(idle)),
     agent(BinId),
     format('[BIN ~w] EMPTIED by truck | Level reset to 0% | Resuming fill~n',[BinId]),
-    messageA(logger, log(info,bin_reset,BinId)).
+    messageA(logger, send_message(log(info,bin_reset,BinId), BinId)).
 
 retry_collectionE(Bin,ReqId,Token) :>
     shared_token(Token),
     agent(Bin),
     shared_token(Tok),
-    messageA(control_center, bin_full(Bin,Tok)).
+    messageA(control_center, send_message(bin_full(Bin,Tok), Bin)).
 
 
 

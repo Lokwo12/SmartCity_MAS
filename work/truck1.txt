@@ -136,7 +136,7 @@ assignmentE(Bin,ReqId) :>
     !,
     agent(T),
     shared_token(Tok),
-    messageA(control_center, assignment_ack(T,Bin,ReqId,Tok)).
+    messageA(control_center, send_message(assignment_ack(T,Bin,ReqId,Tok), T)).
 
 assignmentE(Bin,ReqId) :>
     current_job(Bin,ReqId),
@@ -209,8 +209,8 @@ mark_assignment_ackA(T,Bin,ReqId) :-
     ReqId > 0,
     assert(seen_assignment(ReqId)),
     shared_token(Token),
-    safe_sendA(control_center, assignment_ack(T,Bin,ReqId,Token), T),
-    safe_sendA(control_center, assignment_ack(T,Bin,ReqId), T).
+    safe_sendA(control_center, send_message(assignment_ack(T,Bin,ReqId,Token), T), T),
+    safe_sendA(control_center, send_message(assignment_ack(T,Bin,ReqId), T), T).
 
 mark_assignment_ackA(_T,_Bin,ReqId) :-
     ReqId =< 0.
@@ -225,38 +225,38 @@ mark_completedA(ReqId) :-
 send_refuseA(T,Bin,ReqId) :-
     ReqId > 0,
     shared_token(Token),
-    messageA(control_center, job_refuse(T,Bin,ReqId,Token)).
+    messageA(control_center, send_message(job_refuse(T,Bin,ReqId,Token), T)).
 
 send_refuseA(T,Bin,ReqId) :-
     ReqId =< 0,
-    messageA(control_center, job_refuse(T,Bin)).
+    messageA(control_center, send_message(job_refuse(T,Bin), T)).
 
 send_acceptA(T,Bin,ReqId) :-
     ReqId > 0,
     shared_token(Token),
-    messageA(control_center, job_accept(T,Bin,ReqId,Token)).
+    messageA(control_center, send_message(job_accept(T,Bin,ReqId,Token), T)).
 
 send_acceptA(T,Bin,ReqId) :-
     ReqId =< 0,
-    messageA(control_center, job_accept(T,Bin)).
+    messageA(control_center, send_message(job_accept(T,Bin), T)).
 
 send_completeA(T,Bin,ReqId) :-
     ReqId > 0,
     shared_token(Token),
-    safe_sendA(control_center, collection_complete(Bin,ReqId,Token), T),
-    safe_sendA(control_center, collection_complete(Bin,ReqId), T),
-    safe_sendA(control_center, collection_complete(Bin), T).
+    safe_sendA(control_center, send_message(collection_complete(Bin,ReqId,Token), T), T),
+    safe_sendA(control_center, send_message(collection_complete(Bin,ReqId), T), T),
+    safe_sendA(control_center, send_message(collection_complete(Bin), T), T).
 
 send_completeA(T,Bin,ReqId) :-
     ReqId =< 0,
-    messageA(control_center, collection_complete(Bin)).
+    messageA(control_center, send_message(collection_complete(Bin), T)).
 
 send_failedA(T,Bin,ReqId) :-
     ReqId > 0,
     shared_token(Token),
-    safe_sendA(control_center, collection_failed(T,Bin,ReqId,Token), T),
-    safe_sendA(control_center, collection_failed(T,Bin,ReqId), T),
-    safe_sendA(control_center, collection_failed(T,Bin), T).
+    safe_sendA(control_center, send_message(collection_failed(T,Bin,ReqId,Token), T), T),
+    safe_sendA(control_center, send_message(collection_failed(T,Bin,ReqId), T), T),
+    safe_sendA(control_center, send_message(collection_failed(T,Bin), T), T).
 
 safe_sendA(To,Msg,From) :-
     messageA(To, Msg),
@@ -265,7 +265,7 @@ safe_sendA(_,_,_).
 
 send_failedA(T,Bin,ReqId) :-
     ReqId =< 0,
-    messageA(control_center, collection_failed(T,Bin)).
+    messageA(control_center, send_message(collection_failed(T,Bin), T)).
 
 monitorI(dummy) :>
     \+ started,

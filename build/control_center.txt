@@ -77,7 +77,7 @@ short_truck_id(Truck,Truck).
 
 telemetryA(Level,Name,ReqId,Bin,Truck,Note) :-
     messageA(logger,
-        log(Level,event(Name,req(ReqId),bin(Bin),truck(Truck),note(Note)),control_center)).
+        send_message(log(Level,event(Name,req(ReqId),bin(Bin),truck(Truck),note(Note)),control_center), control_center)).
 
 persist_dead_letterA(ReqId,Bin,Reason) :-
     statistics(walltime,[Ts,_]),
@@ -231,7 +231,7 @@ dispatchI(ReqId,Bin,Candidates) :>
     assert(inflight(ReqId,Bin,T,awaiting_reply,Ttl,0)),
     format('[CC] DISPATCH | req=~w | bin=~w -> ~w dispatched~n',[ReqId,Bin,T]),
     shared_token(Token),
-    messageA(T, pickup_request(Bin,ReqId,Token)),
+    messageA(T, send_message(pickup_request(Bin,ReqId,Token), control_center)),
     telemetryA(info,pickup_request_sent,ReqId,Bin,T,awaiting_reply).
 
 job_acceptE(T,Bin,ReqId,Token) :>
@@ -314,8 +314,8 @@ collection_completeE(Bin,ReqId) :>
     retractall(inflight(ReqId,Bin,T,_,_,_)),
     assert(inflight(ReqId,Bin,T,awaiting_reset_ack,RaTtl,0)),
     shared_token(Token),
-    messageA(Bin, reset_bin(Bin,ReqId,Token)),
-    messageA(logger, log(info,collection_complete,Bin)),
+    messageA(Bin, send_message(reset_bin(Bin,ReqId,Token), control_center)),
+    messageA(logger, send_message(log(info,collection_complete,Bin), control_center)),
     telemetryA(info,reset_sent_awaiting_ack,ReqId,Bin,T,awaiting_reset_ack).
 
 collection_completeE(Bin,ReqId) :>
@@ -393,8 +393,8 @@ timeout_stepA(ReqId,Bin,T,awaiting_assign_ack,1,R) :-
     R1 is R + 1,
     assert(inflight(ReqId,Bin,T,awaiting_assign_ack,Ttl,R1)),
     shared_token(Token),
-    messageA(T, assignment(Bin,ReqId,Token)),
-    messageA(T, assignment(Bin,ReqId)),
+    messageA(T, send_message(assignment(Bin,ReqId,Token), control_center)),
+    messageA(T, send_message(assignment(Bin,ReqId), control_center)),
     telemetryA(warn,assign_ack_timeout_resend,ReqId,Bin,T,resend_assignment).
 
 timeout_stepA(ReqId,Bin,T,awaiting_assign_ack,1,R) :-
