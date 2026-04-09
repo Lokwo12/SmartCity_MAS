@@ -7,7 +7,8 @@ startI :>
     retractall(started),
     assert(started),
     retractall(log_store(_,_,_,_)),
-    retractall(recent_log(_,_)).
+    retractall(recent_log(_,_)),
+    write('=== [LOGGER] Central logger online ==='), nl.
 
 should_printA(Key) :-
     statistics(walltime,[Now,_]),
@@ -22,6 +23,9 @@ should_printA(Key) :-
     retractall(recent_log(Key,_)),
     assert(recent_log(Key,Now)),
     true.
+
+% DALI Field 0 registration stub - registers 'log' functor in desired event list
+logE(_) :> fail.
 
 logE(log(Level,Event,Sender)) :>
     statistics(walltime, [T,_]),
@@ -58,29 +62,35 @@ logE(log(Level,event(Name,req(ReqId),bin(Bin),truck(Truck),note(Note)),Sender)) 
 logE(log(error,Event,Sender)) :>
     should_printA(k(error,Sender,Event)),
     !,
-    write('[ALERT] '), write(Sender),
-    write(' -> '), write(Event), nl.
+    write(''), nl,
+    write('!!! [LOGGER ALERT] '), write(Sender),
+    write(' => '), write(Event), write(' !!!'), nl.
 
 logE(log(error,_Event,_Sender)) :>
     true.
 
-send_message(inform(log(Level,Event,Sender),_),_From) :-
-    fire_event(log(log(Level,Event,Sender))).
+
+
+
+
+
+
+log(Level,Event,Sender) :-
+    fireEventA(log(log(Level,Event,Sender))).
 
 send_message(log(Level,Event,Sender),_From) :-
-    fire_event(log(log(Level,Event,Sender))).
+    fireEventA(log(log(Level,Event,Sender))).
 
-send_message(send_message(log(Level,Event,Sender),_),_From) :-
-    fire_event(log(log(Level,Event,Sender))).
+send_message(inform(log(Level,Event,Sender),_),_From) :-
+    fireEventA(log(log(Level,Event,Sender))).
 
-send_message(send_message(inform(log(Level,Event,Sender),_),_),_From) :-
-    fire_event(log(log(Level,Event,Sender))).
-
-fire_event(E) :-
+fireEventA(E) :-
     ( catch(call(eve(E)),_,fail)
     ; catch(call(evi(E)),_,fail)
     ), !.
-fire_event(_).
+fireEventA(_).
+
+fire_event(E) :- fireEventA(E).
 
 monitorI(dummy) :>
     started.

@@ -133,6 +133,7 @@ call_send_message(X,Ag):-
         log_comm(dispatch,X,Ag),
         ( (nonvar(Ag), Ag \= self, catch(send_message(X,Ag),_,fail))
         ; catch(send_message(X,_),_,fail)
+        ; catch(call(eve(X)),_,fail)
         ; catch(call(evi(X)),_,fail)
         ; true
         )

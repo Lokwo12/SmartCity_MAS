@@ -1,7 +1,8 @@
 :- dynamic request/3, tried/2, truck_state/2, started/0, cycle_counter/1.
 :- dynamic req_seq/1, inflight/6, processed_reply/3, completed_req/1, dead_letter/4.
-:- dynamic last_cycle_ts/1, pending_dup_notified/1.
+:- dynamic last_cycle_ts/1.
 :- dynamic rr_idx/1.
+:- dynamic processed_reset_ack/2.
 
 truck(truck1).
 truck(truck2).
@@ -76,20 +77,23 @@ short_truck_id(Truck,Truck).
 
 telemetryA(Level,Name,ReqId,Bin,Truck,Note) :-
     messageA(logger,
-        send_message(log(Level,event(Name,req(ReqId),bin(Bin),truck(Truck),note(Note)),control_center),control_center),
-        control_center).
+        send_message(log(Level,event(Name,req(ReqId),bin(Bin),truck(Truck),note(Note)),control_center), control_center)).
 
 persist_dead_letterA(ReqId,Bin,Reason) :-
     statistics(walltime,[Ts,_]),
     assert(dead_letter(ReqId,Bin,Reason,Ts)),
     telemetryA(error,dead_letter,ReqId,Bin,none,Reason).
 
+bin_fullE(Bin, Token) :>
+    shared_token(Token),
+    !,
+    bin_fullE(Bin).
+
 bin_fullE(Bin) :>
     trusted_bin(Bin),
     \+ pending_bin(Bin),
     !,
-    retractall(pending_dup_notified(Bin)),
-    format('[CONTROL_CENTER] BIN_FULL received from bin=~w~n',[Bin]),
+    format('~n[CC] *** ALERT *** BIN FULL from ~w | Opening new request...~n',[Bin]),
     new_req_idA(ReqId),
     clear_tried_listA(Bin),
     telemetryA(info,request_opened,ReqId,Bin,none,accepted),
@@ -97,91 +101,98 @@ bin_fullE(Bin) :>
 
 bin_fullE(Bin) :>
     pending_bin(Bin),
-    \+ pending_dup_notified(Bin),
-    !,
-    assert(pending_dup_notified(Bin)),
-    telemetryA(warn,duplicate_bin_full,0,Bin,none,ignored).
+    !.
 
-bin_fullE(Bin) :>
-    pending_bin(Bin),
-    pending_dup_notified(Bin),
-    !,
-    true.
 
-send_message(inform(bin_full(Bin),Token),From) :-
-    shared_token(Token), trusted_bin(From),
-    fire_event(bin_full(Bin)).
 
-send_message(bin_full(Bin),From) :-
-    trusted_bin(From),
-    fire_event(bin_full(Bin)).
 
-send_message(bin_full(Bin,Token),From) :-
-    shared_token(Token), trusted_bin(From),
-    fire_event(bin_full(Bin)).
 
-send_message(agree(pickup(Bin),T),From) :-
-    fire_event(job_accept(T,Bin,0)).
 
-send_message(job_accept(T,Bin),From) :-
-    fire_event(job_accept(T,Bin,0)).
 
-send_message(job_accept(T,Bin,ReqId,Token),From) :-
-    shared_token(Token),
-    fire_event(job_accept(T,Bin,ReqId)).
 
-send_message(refuse(pickup(Bin),T),From) :-
-    fire_event(job_refuse(T,Bin,0)).
 
-send_message(job_refuse(T,Bin),From) :-
-    fire_event(job_refuse(T,Bin,0)).
 
-send_message(job_refuse(T,Bin,ReqId,Token),From) :-
-    shared_token(Token),
-    fire_event(job_refuse(T,Bin,ReqId)).
 
-send_message(assignment_ack(T,Bin,ReqId,Token),From) :-
-    shared_token(Token),
-    fire_event(assignment_ack(T,Bin,ReqId)).
 
-send_message(assignment_ack(T,Bin,ReqId),From) :-
-    fire_event(assignment_ack(T,Bin,ReqId)).
 
-send_message(inform(collection_complete(Bin),_),From) :-
-    fire_event(collection_complete(Bin,0)).
 
-send_message(collection_complete(Bin),From) :-
-    fire_event(collection_complete(Bin,0)).
 
-send_message(collection_complete(Bin,ReqId,Token),From) :-
-    shared_token(Token),
-    fire_event(collection_complete(Bin,ReqId)).
 
-send_message(collection_complete(Bin,ReqId),From) :-
-    fire_event(collection_complete(Bin,ReqId)).
 
-send_message(inform(collection_failed(T,Bin),_),From) :-
-    fire_event(collection_failed(T,Bin,0)).
 
-send_message(collection_failed(T,Bin),From) :-
-    fire_event(collection_failed(T,Bin,0)).
 
-send_message(collection_failed(T,Bin,ReqId,Token),From) :-
-    shared_token(Token),
-    fire_event(collection_failed(T,Bin,ReqId)).
 
-send_message(collection_failed(T,Bin,ReqId),From) :-
-    fire_event(collection_failed(T,Bin,ReqId)).
 
-send_message(reset_ack(Bin,ReqId,Token),From) :-
-    shared_token(Token), trusted_bin(From),
-    fire_event(reset_ack(Bin,ReqId)).
 
-fire_event(E) :-
+fireEventA(E) :-
     ( catch(call(eve(E)),_,fail)
     ; catch(call(evi(E)),_,fail)
     ), !.
-fire_event(_).
+fireEventA(_).
+
+fire_event(E) :- fireEventA(E).
+
+% send_message handlers - strip Token, fire simple-arity eve() (proven DALI pattern).
+bin_full(Bin,Token) :-
+    shared_token(Token), trusted_bin(Bin), fire_event(bin_full(Bin)).
+bin_full(Bin) :-
+    trusted_bin(Bin), fire_event(bin_full(Bin)).
+send_message(bin_full(Bin,Token),From) :-
+    shared_token(Token), trusted_bin(From), fire_event(bin_full(Bin)).
+send_message(bin_full(Bin),From) :-
+    trusted_bin(From), fire_event(bin_full(Bin)).
+job_accept(T,Bin,ReqId,Token) :-
+    shared_token(Token), fire_event(job_accept(T,Bin,ReqId)).
+job_accept(T,Bin,ReqId) :-
+    fire_event(job_accept(T,Bin,ReqId)).
+send_message(job_accept(T,Bin,ReqId,Token),_From) :-
+    shared_token(Token), fire_event(job_accept(T,Bin,ReqId)).
+send_message(job_accept(T,Bin,ReqId),_From) :-
+    fire_event(job_accept(T,Bin,ReqId)).
+job_refuse(T,Bin,ReqId,Token) :-
+    shared_token(Token), fire_event(job_refuse(T,Bin,ReqId)).
+job_refuse(T,Bin,ReqId) :-
+    fire_event(job_refuse(T,Bin,ReqId)).
+send_message(job_refuse(T,Bin,ReqId,Token),_From) :-
+    shared_token(Token), fire_event(job_refuse(T,Bin,ReqId)).
+send_message(job_refuse(T,Bin,ReqId),_From) :-
+    fire_event(job_refuse(T,Bin,ReqId)).
+assignment_ack(T,Bin,ReqId,Token) :-
+    shared_token(Token), fire_event(assignment_ack(T,Bin,ReqId)).
+assignment_ack(T,Bin,ReqId) :-
+    fire_event(assignment_ack(T,Bin,ReqId)).
+send_message(assignment_ack(T,Bin,ReqId,Token),_From) :-
+    shared_token(Token), fire_event(assignment_ack(T,Bin,ReqId)).
+send_message(assignment_ack(T,Bin,ReqId),_From) :-
+    fire_event(assignment_ack(T,Bin,ReqId)).
+collection_complete(Bin,ReqId,Token) :-
+    shared_token(Token), fire_event(collection_complete(Bin,ReqId)).
+collection_complete(Bin,ReqId) :-
+    fire_event(collection_complete(Bin,ReqId)).
+collection_complete(Bin) :-
+    fire_event(collection_complete(Bin,0)).
+send_message(collection_complete(Bin,ReqId,Token),_From) :-
+    shared_token(Token), fire_event(collection_complete(Bin,ReqId)).
+send_message(collection_complete(Bin,ReqId),_From) :-
+    fire_event(collection_complete(Bin,ReqId)).
+send_message(collection_complete(Bin),_From) :-
+    fire_event(collection_complete(Bin,0)).
+collection_failed(T,Bin,ReqId,Token) :-
+    shared_token(Token), fire_event(collection_failed(T,Bin,ReqId)).
+collection_failed(T,Bin,ReqId) :-
+    fire_event(collection_failed(T,Bin,ReqId)).
+collection_failed(T,Bin) :-
+    fire_event(collection_failed(T,Bin,0)).
+send_message(collection_failed(T,Bin,ReqId,Token),_From) :-
+    shared_token(Token), fire_event(collection_failed(T,Bin,ReqId)).
+send_message(collection_failed(T,Bin,ReqId),_From) :-
+    fire_event(collection_failed(T,Bin,ReqId)).
+send_message(collection_failed(T,Bin),_From) :-
+    fire_event(collection_failed(T,Bin,0)).
+reset_ack(Bin,ReqId,Token) :-
+    shared_token(Token), fire_event(reset_ack(Bin,ReqId)).
+send_message(reset_ack(Bin,ReqId,Token),_From) :-
+    shared_token(Token), fire_event(reset_ack(Bin,ReqId)).
 
 select_truckI(ReqId,Bin) :>
     findall(T,
@@ -218,17 +229,22 @@ dispatchI(ReqId,Bin,Candidates) :>
     reply_ttl(Ttl),
     retractall(inflight(ReqId,Bin,T,_,_,_)),
     assert(inflight(ReqId,Bin,T,awaiting_reply,Ttl,0)),
-    format('[CONTROL_CENTER] DISPATCH request=~w bin=~w truck=~w~n',[ReqId,Bin,T]),
+    format('[CC] DISPATCH | req=~w | bin=~w -> ~w dispatched~n',[ReqId,Bin,T]),
     shared_token(Token),
-    messageA(T, send_message(pickup_request(Bin,ReqId,Token),control_center), control_center),
+    messageA(T, send_message(pickup_request(Bin,ReqId,Token), control_center)),
     telemetryA(info,pickup_request_sent,ReqId,Bin,T,awaiting_reply).
+
+job_acceptE(T,Bin,ReqId,Token) :>
+    shared_token(Token),
+    !,
+    job_acceptE(T,Bin,ReqId).
 
 job_acceptE(T,Bin,ReqId) :>
     request(ReqId,Bin,T),
     inflight(ReqId,Bin,T,awaiting_reply,_,_),
     \+ processed_reply(ReqId,T,accept),
     !,
-    format('[CONTROL_CENTER] ACCEPT request=~w bin=~w truck=~w~n',[ReqId,Bin,T]),
+    format('[CC] ACCEPTED | req=~w | ~w confirmed en route to ~w~n',[ReqId,T,Bin]),
     assert(processed_reply(ReqId,T,accept)),
     retractall(truck_state(T,_)),
     assert(truck_state(T,busy)),
@@ -237,12 +253,20 @@ job_acceptE(T,Bin,ReqId) :>
     assert(inflight(ReqId,Bin,T,awaiting_completion,Ttl,0)),
     telemetryA(info,pickup_accepted_start_collection,ReqId,Bin,T,awaiting_completion).
 
+job_acceptE(T,Bin,ReqId) :>
+    !.
+
+job_refuseE(T,Bin,ReqId,Token) :>
+    shared_token(Token),
+    !,
+    job_refuseE(T,Bin,ReqId).
+
 job_refuseE(T,Bin,ReqId) :>
     request(ReqId,Bin,T),
     inflight(ReqId,Bin,T,awaiting_reply,_,_),
     \+ processed_reply(ReqId,T,refuse),
     !,
-    format('[CONTROL_CENTER] REFUSE request=~w bin=~w truck=~w -> reselection~n',[ReqId,Bin,T]),
+    format('[CC] REFUSED by ~w | req=~w | bin=~w -> selecting another truck~n',[T,ReqId,Bin]),
     assert(processed_reply(ReqId,T,refuse)),
     retract(request(ReqId,Bin,T)),
     retractall(inflight(ReqId,Bin,T,_,_,_)),
@@ -250,52 +274,65 @@ job_refuseE(T,Bin,ReqId) :>
     telemetryA(warn,truck_refused,ReqId,Bin,T,retry_select),
     select_truckI(ReqId,Bin).
 
-job_acceptE(T,Bin,ReqId) :>
-    request(ReqId,Bin,T),
-    \+ inflight(ReqId,Bin,T,awaiting_reply,_,_),
-    telemetryA(info,late_accept_ignored,ReqId,Bin,T,non_reply_stage).
-
 job_refuseE(T,Bin,ReqId) :>
-    request(ReqId,Bin,T),
-    \+ inflight(ReqId,Bin,T,awaiting_reply,_,_),
-    telemetryA(info,late_refuse_ignored,ReqId,Bin,T,non_reply_stage).
+    !.
+
+% Late accept/refuse with token - silently ignore (already handled by Token variant above)
+
+assignment_ackE(T,Bin,ReqId,Token) :>
+    shared_token(Token),
+    !,
+    assignment_ackE(T,Bin,ReqId).
 
 assignment_ackE(T,Bin,ReqId) :>
     request(ReqId,Bin,T),
     inflight(ReqId,Bin,T,awaiting_assign_ack,_,R),
     !,
-    format('[CONTROL_CENTER] ASSIGNMENT_ACK request=~w bin=~w truck=~w~n',[ReqId,Bin,T]),
+    format('[CC] ASSIGNMENT_ACK | req=~w | ~w en route to ~w~n',[ReqId,T,Bin]),
     completion_ttl(Ttl),
     retract(inflight(ReqId,Bin,T,awaiting_assign_ack,_,R)),
     assert(inflight(ReqId,Bin,T,awaiting_completion,Ttl,0)),
     telemetryA(info,assignment_acked,ReqId,Bin,T,awaiting_completion).
 
+assignment_ackE(T,Bin,ReqId) :>
+    !.
+
+collection_completeE(Bin,ReqId,Token) :>
+    shared_token(Token),
+    !,
+    collection_completeE(Bin,ReqId).
+
 collection_completeE(Bin,ReqId) :>
     request(ReqId,Bin,T),
     \+ completed_req(ReqId),
     !,
-    format('[CONTROL_CENTER] COLLECTION_COMPLETE request=~w bin=~w truck=~w~n',[ReqId,Bin,T]),
+    format('[CC] COLLECTED | req=~w | ~w emptied ~w | Sending bin reset~n',[ReqId,T,Bin]),
     assert(completed_req(ReqId)),
     retractall(truck_state(T,_)),
     assert(truck_state(T,idle)),
+    reset_ack_ttl(RaTtl),
     retractall(inflight(ReqId,Bin,T,_,_,_)),
+    assert(inflight(ReqId,Bin,T,awaiting_reset_ack,RaTtl,0)),
     shared_token(Token),
-    messageA(Bin, send_message(reset_bin(Bin,ReqId,Token),control_center), control_center),
-    retractall(request(ReqId,Bin,_)),
-    retractall(pending_dup_notified(Bin)),
-    clear_tried_listA(Bin),
-    messageA(logger, send_message(log(info,collection_complete,Bin),control_center), control_center),
-    telemetryA(info,reset_sent_async,ReqId,Bin,T,closed_after_reset_send).
+    messageA(Bin, send_message(reset_bin(Bin,ReqId,Token), control_center)),
+    messageA(logger, send_message(log(info,collection_complete,Bin), control_center)),
+    telemetryA(info,reset_sent_awaiting_ack,ReqId,Bin,T,awaiting_reset_ack).
 
-collection_completeE(Bin,0) :>
-    request(ReqId,Bin,_),
-    ReqId > 0,
-    fire_event(collection_complete(Bin,ReqId)).
+collection_completeE(Bin,ReqId) :>
+    !.
+
+collection_completeE(Bin) :>
+    !.
+
+collection_failedE(T,Bin,ReqId,Token) :>
+    shared_token(Token),
+    !,
+    collection_failedE(T,Bin,ReqId).
 
 collection_failedE(T,Bin,ReqId) :>
     request(ReqId,Bin,T),
     !,
-    format('[CONTROL_CENTER] COLLECTION_FAILED request=~w bin=~w truck=~w -> reselection~n',[ReqId,Bin,T]),
+    format('[CC] FAILED | req=~w | ~w could not empty ~w -> reassigning~n',[ReqId,T,Bin]),
     retractall(truck_state(T,_)),
     assert(truck_state(T,idle)),
     retract(request(ReqId,Bin,T)),
@@ -304,24 +341,32 @@ collection_failedE(T,Bin,ReqId) :>
     telemetryA(warn,collection_failed,ReqId,Bin,T,retry_select),
     select_truckI(ReqId,Bin).
 
-collection_failedE(T,Bin,0) :>
-    request(ReqId,Bin,T),
-    ReqId > 0,
-    fire_event(collection_failed(T,Bin,ReqId)).
+collection_failedE(T,Bin,ReqId) :>
+    !.
+
+
+
+reset_ackE(Bin,ReqId,Token) :>
+    shared_token(Token),
+    !,
+    reset_ackE(Bin,ReqId).
 
 reset_ackE(Bin,ReqId) :>
     inflight(ReqId,Bin,T,awaiting_reset_ack,_,_),
+    \+ processed_reset_ack(Bin,ReqId),
     !,
-    format('[CONTROL_CENTER] RESET_ACK request=~w bin=~w truck=~w -> closed~n',[ReqId,Bin,T]),
+    assert(processed_reset_ack(Bin,ReqId)),
+    format('[CC] RESET_ACK | req=~w | ~w reset confirmed -> request CLOSED~n',[ReqId,Bin]),
     retractall(inflight(ReqId,Bin,T,awaiting_reset_ack,_,_)),
     retractall(request(ReqId,Bin,_)),
-    retractall(pending_dup_notified(Bin)),
+    retractall(processed_reset_ack(Bin,ReqId)),
     clear_tried_listA(Bin),
     telemetryA(info,request_closed,ReqId,Bin,T,reset_acked).
 
 reset_ackE(Bin,ReqId) :>
-    \+ inflight(ReqId,Bin,_,awaiting_reset_ack,_,_),
-    telemetryA(info,late_reset_ack,ReqId,Bin,none,ignored_after_async_close).
+    !.
+
+
 
 process_timeoutsA :-
     findall(inflight(ReqId,Bin,T,Stage,Ttl,R), inflight(ReqId,Bin,T,Stage,Ttl,R), L),
@@ -348,8 +393,8 @@ timeout_stepA(ReqId,Bin,T,awaiting_assign_ack,1,R) :-
     R1 is R + 1,
     assert(inflight(ReqId,Bin,T,awaiting_assign_ack,Ttl,R1)),
     shared_token(Token),
-    messageA(T, send_message(assignment(Bin,ReqId,Token),control_center), control_center),
-    messageA(T, send_message(assignment(Bin,ReqId),control_center), control_center),
+    messageA(T, send_message(assignment(Bin,ReqId,Token), control_center)),
+    messageA(T, send_message(assignment(Bin,ReqId), control_center)),
     telemetryA(warn,assign_ack_timeout_resend,ReqId,Bin,T,resend_assignment).
 
 timeout_stepA(ReqId,Bin,T,awaiting_assign_ack,1,R) :-
@@ -368,11 +413,11 @@ timeout_stepA(ReqId,Bin,T,awaiting_completion,1,_) :-
     select_truckI(ReqId,Bin).
 
 timeout_stepA(ReqId,Bin,T,awaiting_reset_ack,1,_) :-
+    format('[CC] RESET_ACK timeout req=~w bin=~w -> closing anyway~n',[ReqId,Bin]),
     retractall(inflight(ReqId,Bin,T,awaiting_reset_ack,1,_)),
     retractall(request(ReqId,Bin,_)),
-    retractall(pending_dup_notified(Bin)),
-    clear_tried_listA(Bin),
-    telemetryA(warn,reset_ack_timeout,ReqId,Bin,T,closed_without_ack).
+    retractall(processed_reset_ack(Bin,ReqId)),
+    clear_tried_listA(Bin).
 
 timeout_stepA(ReqId,Bin,none,awaiting_retry,1,_) :-
     retractall(inflight(ReqId,Bin,none,awaiting_retry,1,_)),
