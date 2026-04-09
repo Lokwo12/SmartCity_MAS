@@ -1,0 +1,6 @@
+agent('tmp/','','no',italian,
+      ['/home/studente/SmartCity_MAS/conf/communication'],
+      ['/communication_fipa','/learning','/planasp'],
+      'no',
+      '/onto/dali_onto.txt',
+      [startI]).

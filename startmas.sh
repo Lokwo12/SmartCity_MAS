@@ -195,16 +195,19 @@ launch_agent() {
     sleep "$delay"
 }
 
-# Launch all agents in a single AGENTS window - all visible at once
-# LINDA Server is already in pane 0, start agents from pane 1
+# Launch all agents in a single AGENTS window - all visible at once.
+# Tiled layout fills rows in launch order:
+# top row -> LINDA_SERVER, control_center, logger
+# middle row -> smart bins
+# bottom row -> trucks
 launch_agent "control_center"
 launch_agent "logger"
-launch_agent "truck1"
-launch_agent "truck2"
-launch_agent "truck3"
 launch_agent "smart_bin1" "0.2"
 launch_agent "smart_bin2" "0.2"
 launch_agent "smart_bin3" "0.2"
+launch_agent "truck1"
+launch_agent "truck2"
+launch_agent "truck3"
 
 tmux select-window -t DALI_session:AGENTS
 

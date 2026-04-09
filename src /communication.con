@@ -11,3 +11,4 @@ tell(_,_,inform(_,_)):-true.
 tell(_,_,inform(_)):-true.
 
 meta(P,P,_) :- nonvar(P), !.
+

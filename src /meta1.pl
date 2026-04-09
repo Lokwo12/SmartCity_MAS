@@ -48,6 +48,60 @@ chiama_send_message(F,E,_,_,AgM,_,Time):-meta(E,G,AgM),go_rvar(G),
                 prendi_value(H),extern(F,H),extern_args(F,H),
                 ext_event(_,_,AgM,_,_,H,Time).
 
+% SmartCity runtime safeguard: generated desired-event metadata can miss
+% some valid lifecycle terms. Allow these messages instead of dropping them.
+lifecycle_msg(bin_full(_,_)).
+lifecycle_msg(bin_full(_)).
+lifecycle_msg(reset_bin).
+lifecycle_msg(reset_bin(_,_,_)).
+lifecycle_msg(reset_ack(_,_,_)).
+lifecycle_msg(collection_complete(_)).
+lifecycle_msg(collection_complete(_,_)).
+lifecycle_msg(collection_complete(_,_,_)).
+lifecycle_msg(log(_,_,_)).
+lifecycle_msg(log(_,_)).
+lifecycle_msg(send_message(bin_full(_,_),_)).
+lifecycle_msg(send_message(reset_bin(_,_,_),_)).
+lifecycle_msg(send_message(reset_ack(_,_,_),_)).
+lifecycle_msg(send_message(job_accept(_,_,_,_),_)).
+lifecycle_msg(send_message(job_refuse(_,_,_,_),_)).
+lifecycle_msg(send_message(assignment_ack(_,_,_,_),_)).
+lifecycle_msg(send_message(collection_complete(_,_,_),_)).
+lifecycle_msg(send_message(collection_failed(_,_,_,_),_)).
+
+lifecycle_functor(bin_full).
+lifecycle_functor(reset_bin).
+lifecycle_functor(reset_ack).
+lifecycle_functor(collection_complete).
+lifecycle_functor(collection_failed).
+lifecycle_functor(job_accept).
+lifecycle_functor(job_refuse).
+lifecycle_functor(assignment_ack).
+
+lifecycle_allowed(E) :-
+                lifecycle_msg(E), !.
+
+lifecycle_allowed(send_message(E,_)) :-
+                lifecycle_allowed(E), !.
+
+lifecycle_allowed(E) :-
+                nonvar(E),
+                compound(E),
+                functor(E,F,_),
+                lifecycle_functor(F).
+
+chiama_send_message(F,E,_,_,AgM,_,Time):-
+                lifecycle_allowed(E),
+                present(F,E,Time),pre_event(F,E,Time),
+                ext_event(_,_,AgM,_,_,E,Time).
+
+chiama_send_message(_,E,_,_,AgM,_,Time):-
+                lifecycle_allowed(E),
+                ext_event(_,_,AgM,_,_,E,Time).
+
+chiama_send_message(_,E,_,_,_,_,_):-
+                lifecycle_allowed(E),
+                !.
 
 chiama_send_message(_,E,_,_,AgM,_,_):-
                                      write('This event is not in desired event list:'), write(E),write(','), write(learning(E,AgM)),nl.
