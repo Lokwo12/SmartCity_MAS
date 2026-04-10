@@ -1,39 +1,35 @@
 
-:-dynamic log_store/4,started/0.
-
-:-dynamic recent_log/2.
+:-dynamic log_store/4,started/0,recent_log/2.
 
 dedup_window_ms(1200).
 
-evi(start):-retractall(started),assert(started),retractall(log_store(_127157,_127159,_127161,_127163)),retractall(recent_log(_127171,_127173)).
+evi(log_print(_118321,_118323,_118325)):-statistics(walltime,[_118339,_118343]),(_118321=info->_118373='INFO';_118321=warn->_118373='WARN';_118321=error->_118373='ERROR';_118373=_118321),format('[logger +~wms] ~w src=~w | ~w~n',[_118339,_118373,_118323,_118325]).
 
-a(should_print(_127043)):-statistics(walltime,[_127057,_127061]),dedup_window_ms(_127073),recent_log(_127043,_127085),_127057-_127085<_127073,!,false.
+evi(start):-retractall(started),assert(started),retractall(log_store(_118287,_118289,_118291,_118293)),retractall(recent_log(_118301,_118303)).
 
-a(should_print(_126973)):-statistics(walltime,[_126987,_126991]),retractall(recent_log(_126973,_127009)),assert(recent_log(_126973,_126987)),true.
+evi(should_print(_118167,_118169,_118171,_118173)):-statistics(walltime,[_118187,_118191]),dedup_window_ms(_118203),recent_log(_118167,_118215),_118187-_118215<_118203,!,true.
 
-eve(log(log(_126803,_126805,_126807))):-statistics(walltime,[_126821,_126825]),assert(log_store(_126821,_126807,_126805,_126803)),a(should_print(k(_126803,_126807,_126805))),!,write('[LOG-'),write(_126803),write('] '),write(_126821),write(' ['),write(_126807),write('] -> '),write(_126805),nl.
+evi(should_print(_118079,_118081,_118083,_118085)):-statistics(walltime,[_118099,_118103]),retractall(recent_log(_118079,_118121)),assert(recent_log(_118079,_118099)),evi(log_print(_118081,_118083,_118085)).
 
-eve(log(log(_126737,_126739,_126741))):-statistics(walltime,[_126755,_126759]),assert(log_store(_126755,_126741,_126739,_126737)),true.
+evi(log(log(_117995,_117997,_117999))):-statistics(walltime,[_118013,_118017]),assert(log_store(_118013,_117999,_117997,_117995)),evi(should_print(k(_117995,_117999,_117997),_117995,_117999,_117997)).
 
-eve(log(log(_126415,event(_126423,req(_126435),bin(_126439),truck(_126443),note(_126447)),_126419))):-statistics(walltime,[_126461,_126465]),assert(log_store(_126461,_126419,event(_126423,req(_126435),bin(_126439),truck(_126443),note(_126447)),_126415)),a(should_print(k(_126415,_126419,event(_126423,_126435,_126439,_126443,_126447)))),!,write('[LOG-'),write(_126415),write('] '),write(_126461),write(' ['),write(_126419),write('] '),write(_126423),write(' req='),write(_126435),write(' bin='),write(_126439),write(' truck='),write(_126443),write(' note='),write(_126447),nl.
+evi(log(log(_117765,event(_117773,req(_117785),bin(_117789),truck(_117793),note(_117797)),_117769))):-statistics(walltime,[_117811,_117815]),assert(log_store(_117811,_117769,event(_117773,req(_117785),bin(_117789),truck(_117793),note(_117797)),_117765)),(atom_concat(smart_bin,_117889,_117789)->atom_concat(smartbin,_117889,_117899);_117899=_117789),format(atom(_117923),'~w bin=~w truck=~w note=~w',[_117773,_117899,_117793,_117797]),evi(should_print(k(_117765,_117769,event(_117773,_117785,_117789,_117793,_117797)),_117765,_117769,_117923)).
 
-eve(log(log(_126293,event(_126301,req(_126313),bin(_126317),truck(_126321),note(_126325)),_126297))):-statistics(walltime,[_126339,_126343]),assert(log_store(_126339,_126297,event(_126301,req(_126313),bin(_126317),truck(_126321),note(_126325)),_126293)),true.
+evi(log(log(error,_117719,_117721))):-evi(should_print(k(error,_117721,_117719),error,_117721,_117719)).
 
-eve(log(log(error,_126201,_126203))):-a(should_print(k(error,_126203,_126201))),!,write('[ALERT] '),write(_126203),write(' -> '),write(_126201),nl.
+send_message(send_message(_117681,_117683),_117677):-!,send_message(_117681,_117677).
 
-eve(log(log(error,_126175,_126177))):-true.
+send_message(inform(_117647,_117649),_117643):-!,send_message(_117647,_117643).
 
-send_message(inform(log(_126131,_126133,_126135),_126127),_126121):-fire_event(log(log(_126131,_126133,_126135))).
+send_message(_117615,_117617):-evi(log_in(_117615,_117617)).
 
-send_message(log(_126085,_126087,_126089),_126081):-fire_event(log(log(_126085,_126087,_126089))).
+evi(log_in(inform(log(_117581,_117583,_117585),_117577),_117571)):-evi(log(log(_117581,_117583,_117585))).
 
-send_message(send_message(log(_126045,_126047,_126049),_126041),_126035):-fire_event(log(log(_126045,_126047,_126049))).
+evi(log_in(log(_117531,_117533,_117535),_117527)):-evi(log(log(_117531,_117533,_117535))).
 
-send_message(send_message(inform(log(_125999,_126001,_126003),_125995),_125989),_125983):-fire_event(log(log(_125999,_126001,_126003))).
+evi(log_in(send_message(log(_117487,_117489,_117491),_117483),_117477)):-evi(log(log(_117487,_117489,_117491))).
 
-fire_event(_125923):-(catch(call(eve(_125923)),_125941,fail);catch(call(evi(_125923)),_125957,fail)),!.
-
-fire_event(_125909).
+evi(log_in(send_message(inform(log(_117437,_117439,_117441),_117433),_117427),_117421)):-evi(log(log(_117437,_117439,_117441))).
 
 evi(monitor(dummy)):-started.
 
@@ -49,19 +45,19 @@ monitor(dummy):-evi(monitor(dummy)).
 
 comm_trace(off).
 
-log_comm(_125687,_125689,_125691):-comm_trace(on),!,write(comm),write(_125687),write(from),write(_125691),write(payload),write(_125689),nl.
+log_comm(_117187,_117189,_117191):-comm_trace(on),!,write(comm),write(_117187),write(from),write(_117191),write(payload),write(_117189),nl.
 
-log_comm(_125669,_125671,_125673).
+log_comm(_117169,_117171,_117173).
 
-safe_told(_125631,_125633):-current_predicate(told/2)->told(_125631,_125633);true.
+safe_told(_117131,_117133):-current_predicate(told/2)->told(_117131,_117133);true.
 
-safe_told(_125577,_125579,_125581):-current_predicate(told/3)->told(_125577,_125579,_125581);_125581=0.
+safe_told(_117077,_117079,_117081):-current_predicate(told/3)->told(_117077,_117079,_117081);_117081=0.
 
-safe_tell(_125529,_125531,_125533):-current_predicate(tell/3)->tell(_125529,_125531,_125533);true.
+safe_tell(_117029,_117031,_117033):-current_predicate(tell/3)->tell(_117029,_117031,_117033);true.
 
 log_comm(var_Tag,var_X,var_Ag):-comm_trace(on),!,write(comm),write(var_Tag),write(from),write(var_Ag),write(payload),write(var_X),nl.
 
-log_comm(_125417,_125419,_125421).
+log_comm(_116917,_116919,_116921).
 
 safe_told(var_Ag,var_M):-current_predicate(told/2)->told(var_Ag,var_M);true.
 
@@ -69,9 +65,9 @@ safe_told(var_Ag,var_M,var_T):-current_predicate(told/3)->told(var_Ag,var_M,var_
 
 safe_tell(var_To,var_Ag,var_M):-current_predicate(tell/3)->tell(var_To,var_Ag,var_M);true.
 
-receive(send_message(_125239,_125241)):-safe_told(_125241,send_message(_125239)),call_send_message(_125239,_125241).
+receive(send_message(_116739,_116741)):-safe_told(_116741,send_message(_116739)),call_send_message(_116739,_116741).
 
-send(_125183,send_message(_125189,_125191)):-safe_tell(_125183,_125191,send_message(_125189)),send_m(_125183,send_message(_125189,_125191)).
+send(_116683,send_message(_116689,_116691)):-safe_tell(_116683,_116691,send_message(_116689)),send_m(_116683,send_message(_116689,_116691)).
 
 receive(send_message(var_X,var_Ag)):-safe_told(var_Ag,send_message(var_X)),call_send_message(var_X,var_Ag).
 
@@ -131,7 +127,7 @@ send(var_To,execute_proc(var_X,var_Ag)):-safe_tell(var_To,var_Ag,execute_proc(va
 
 send(var_To,agree(var_X,var_Ag)):-safe_tell(var_To,var_Ag,agree(var_X)),send_m(var_To,agree(var_X,var_Ag)).
 
-call_send_message(_123611,_123613):-nonvar(_123611)->log_comm(dispatch,_123611,_123613),(nonvar(_123613),_123613\=self,catch(send_message(_123611,_123613),_123677,fail);catch(send_message(_123611,_123705),_123697,fail);catch(call(evi(_123611)),_123717,fail);true);true.
+call_send_message(_115111,_115113):-nonvar(_115111)->log_comm(dispatch,_115111,_115113),(nonvar(_115113),_115113\=self,catch(send_message(_115111,_115113),_115177,fail);catch(send_message(_115111,_115205),_115197,fail);catch(call(evi(_115111)),_115217,fail);true);true.
 
 call_execute_proc(var_X,var_Ag):-execute_proc(var_X,var_Ag).
 
@@ -155,15 +151,15 @@ call_inform(var_X,var_Ag,var_M,var_T):-asse_cosa(past_event(inform(var_X,var_M,v
 
 call_inform(var_X,var_Ag,var_T):-asse_cosa(past_event(inform(var_X,var_Ag),var_T)),statistics(walltime,[var_Tp,var__]),retractall(past(inform(var_X,var_Ag),var__,var_Ag)),assert(past(inform(var_X,var_Ag),var_Tp,var_Ag)),trigger_inform_handlers(var_X,none,var_Ag).
 
-trigger_inform_handlers(var_X,var_M,var_Ag):-catch(call(eve(inform_E(var_X,var_Ag))),_122447,true),catch(call(eve(inform_E(var_X,var_M,var_Ag))),_122475,true),catch(call(eve(inform_E(var_X))),_122505,true),catch(call(eve(inform_(var_X,var_Ag))),_122531,true),catch(call(eve(inform_(var_X,var_M,var_Ag))),_122559,true),catch(call(eve(inform_(var_X))),_122589,true),catch(call(eve(eve(inform_(var_X,var_Ag)))),_122615,true),catch(call(eve(eve(inform_(var_X,var_M,var_Ag)))),_122647,true),catch(call(eve(eve(inform_(var_X)))),_122675,true).
+trigger_inform_handlers(var_X,var_M,var_Ag):-catch(call(eve(inform_E(var_X,var_Ag))),_113947,true),catch(call(eve(inform_E(var_X,var_M,var_Ag))),_113975,true),catch(call(eve(inform_E(var_X))),_114005,true),catch(call(eve(inform_(var_X,var_Ag))),_114031,true),catch(call(eve(inform_(var_X,var_M,var_Ag))),_114059,true),catch(call(eve(inform_(var_X))),_114089,true),catch(call(eve(eve(inform_(var_X,var_Ag)))),_114115,true),catch(call(eve(eve(inform_(var_X,var_M,var_Ag)))),_114147,true),catch(call(eve(eve(inform_(var_X)))),_114175,true).
 
 call_refuse(var_X,var_Ag,var_T):-clause(agent(var_A),var__),asse_cosa(past_event(var_X,var_T)),statistics(walltime,[var_Tp,var__]),retractall(past(var_X,var__,var_Ag)),assert(past(var_X,var_Tp,var_Ag)),a(message(var_Ag,reply(received(var_X),var_A))).
 
-call_cfp(var_A,var_C,var_Ag):-clause(agent(var_AgI),var__),clause(ext_agent(var_Ag,_122211,var_Ontology,_122215),_122205),asserisci_ontologia(var_Ag,var_Ontology,var_A),once(call_meta_execute_cfp(var_A,var_C,var_Ag,_122249)),a(message(var_Ag,propose(var_A,[_122249],var_AgI))),retractall(ext_agent(var_Ag,_122287,var_Ontology,_122291)).
+call_cfp(var_A,var_C,var_Ag):-clause(agent(var_AgI),var__),clause(ext_agent(var_Ag,_113711,var_Ontology,_113715),_113705),asserisci_ontologia(var_Ag,var_Ontology,var_A),once(call_meta_execute_cfp(var_A,var_C,var_Ag,_113749)),a(message(var_Ag,propose(var_A,[_113749],var_AgI))),retractall(ext_agent(var_Ag,_113787,var_Ontology,_113791)).
 
-call_propose(var_A,var_C,var_Ag):-clause(agent(var_AgI),var__),clause(ext_agent(var_Ag,_122085,var_Ontology,_122089),_122079),asserisci_ontologia(var_Ag,var_Ontology,var_A),once(call_meta_execute_propose(var_A,var_C,var_Ag)),a(message(var_Ag,accept_proposal(var_A,[],var_AgI))),retractall(ext_agent(var_Ag,_122155,var_Ontology,_122159)).
+call_propose(var_A,var_C,var_Ag):-clause(agent(var_AgI),var__),clause(ext_agent(var_Ag,_113585,var_Ontology,_113589),_113579),asserisci_ontologia(var_Ag,var_Ontology,var_A),once(call_meta_execute_propose(var_A,var_C,var_Ag)),a(message(var_Ag,accept_proposal(var_A,[],var_AgI))),retractall(ext_agent(var_Ag,_113655,var_Ontology,_113659)).
 
-call_propose(var_A,var_C,var_Ag):-clause(agent(var_AgI),var__),clause(ext_agent(var_Ag,_121973,var_Ontology,_121977),_121967),not(call_meta_execute_propose(var_A,var_C,var_Ag)),a(message(var_Ag,reject_proposal(var_A,[],var_AgI))),retractall(ext_agent(var_Ag,_122029,var_Ontology,_122033)).
+call_propose(var_A,var_C,var_Ag):-clause(agent(var_AgI),var__),clause(ext_agent(var_Ag,_113473,var_Ontology,_113477),_113467),not(call_meta_execute_propose(var_A,var_C,var_Ag)),a(message(var_Ag,reject_proposal(var_A,[],var_AgI))),retractall(ext_agent(var_Ag,_113529,var_Ontology,_113533)).
 
 call_accept_proposal(var_A,var_Mp,var_Ag,var_T):-asse_cosa(past_event(accepted_proposal(var_A,var_Mp,var_Ag),var_T)),statistics(walltime,[var_Tp,var__]),retractall(past(accepted_proposal(var_A,var_Mp,var_Ag),var__,var_Ag)),assert(past(accepted_proposal(var_A,var_Mp,var_Ag),var_Tp,var_Ag)).
 
@@ -171,7 +167,7 @@ call_reject_proposal(var_A,var_Mp,var_Ag,var_T):-asse_cosa(past_event(rejected_p
 
 call_failure(var_A,var_M,var_Ag,var_T):-asse_cosa(past_event(failed_action(var_A,var_M,var_Ag),var_T)),statistics(walltime,[var_Tp,var__]),retractall(past(failed_action(var_A,var_M,var_Ag),var__,var_Ag)),assert(past(failed_action(var_A,var_M,var_Ag),var_Tp,var_Ag)).
 
-call_cancel(var_A,var_Ag):-if(clause(high_action(var_A,var_Te,var_Ag),_121537),retractall(high_action(var_A,var_Te,var_Ag)),true),if(clause(normal_action(var_A,var_Te,var_Ag),_121571),retractall(normal_action(var_A,var_Te,var_Ag)),true).
+call_cancel(var_A,var_Ag):-if(clause(high_action(var_A,var_Te,var_Ag),_113037),retractall(high_action(var_A,var_Te,var_Ag)),true),if(clause(normal_action(var_A,var_Te,var_Ag),_113071),retractall(normal_action(var_A,var_Te,var_Ag)),true).
 
 external_refused_action_propose(var_A,var_Ag):-clause(not_executable_action_propose(var_A,var_Ag),var__).
 
@@ -179,38 +175,38 @@ evi(external_refused_action_propose(var_A,var_Ag)):-clause(agent(var_Ai),var__),
 
 refused_message(var_AgM,var_Con):-clause(eliminated_message(var_AgM,var__,var__,var_Con,var__),var__).
 
-refused_message(var_To,var_M):-clause(eliminated_message(var_M,var_To,motivation(conditions_not_verified)),_121353).
+refused_message(var_To,var_M):-clause(eliminated_message(var_M,var_To,motivation(conditions_not_verified)),_112853).
 
 evi(refused_message(var_AgM,var_Con)):-clause(agent(var_Ai),var__),a(message(var_AgM,inform(var_Con,motivation(refused_message),var_Ai))),retractall(eliminated_message(var_AgM,var__,var__,var_Con,var__)),retractall(eliminated_message(var_Con,var_AgM,motivation(conditions_not_verified))).
 
-send_jasper_return_message(var_X,var_S,var_T,var_S0):-clause(agent(var_Ag),_121201),a(message(var_S,send_message(sent_rmi(var_X,var_T,var_S0),var_Ag))).
+send_jasper_return_message(var_X,var_S,var_T,var_S0):-clause(agent(var_Ag),_112701),a(message(var_S,send_message(sent_rmi(var_X,var_T,var_S0),var_Ag))).
 
-gest_learn(var_H):-clause(past(learn(var_H),var_T,var_U),_121149),learn_if(var_H,var_T,var_U).
+gest_learn(var_H):-clause(past(learn(var_H),var_T,var_U),_112649),learn_if(var_H,var_T,var_U).
 
-evi(gest_learn(var_H)):-retractall(past(learn(var_H),_121025,_121027)),clause(agente(_121047,_121049,_121051,var_S),_121043),name(var_S,var_N),append(var_L,[46,112,108],var_N),name(var_F,var_L),manage_lg(var_H,var_F),a(learned(var_H)).
+evi(gest_learn(var_H)):-retractall(past(learn(var_H),_112525,_112527)),clause(agente(_112547,_112549,_112551,var_S),_112543),name(var_S,var_N),append(var_L,[46,112,108],var_N),name(var_F,var_L),manage_lg(var_H,var_F),a(learned(var_H)).
 
-cllearn:-clause(agente(_120819,_120821,_120823,var_S),_120815),name(var_S,var_N),append(var_L,[46,112,108],var_N),append(var_L,[46,116,120,116],var_To),name(var_FI,var_To),open(var_FI,read,_120919,[]),repeat,read(_120919,var_T),arg(1,var_T,var_H),write(var_H),nl,var_T==end_of_file,!,close(_120919).
+cllearn:-clause(agente(_112319,_112321,_112323,var_S),_112315),name(var_S,var_N),append(var_L,[46,112,108],var_N),append(var_L,[46,116,120,116],var_To),name(var_FI,var_To),open(var_FI,read,_112419,[]),repeat,read(_112419,var_T),arg(1,var_T,var_H),write(var_H),nl,var_T==end_of_file,!,close(_112419).
 
 send_msg_learn(var_T,var_A,var_Ag):-a(message(var_Ag,confirm(learn(var_T),var_A))).
 
-told(_120749,send_message(_120755)):-true.
+told(_112249,send_message(_112255)):-true.
 
-told(_120725,inform(_120733,_120735),70):-true.
+told(_112225,inform(_112233,_112235),70):-true.
 
-told(_120703,inform(_120711),70):-true.
+told(_112203,inform(_112211),70):-true.
 
-told(_120683,refuse(_120689)):-true.
+told(_112183,refuse(_112189)):-true.
 
-told(_120661,refuse(_120667,_120669)):-true.
+told(_112161,refuse(_112167,_112169)):-true.
 
-tell(_120639,_120641,send_message(_120647)):-true.
+tell(_112139,_112141,send_message(_112147)):-true.
 
-tell(_120617,_120619,refuse(_120625)):-true.
+tell(_112117,_112119,refuse(_112125)):-true.
 
-tell(_120593,_120595,refuse(_120601,_120603)):-true.
+tell(_112093,_112095,refuse(_112101,_112103)):-true.
 
-tell(_120569,_120571,inform(_120577,_120579)):-true.
+tell(_112069,_112071,inform(_112077,_112079)):-true.
 
-tell(_120547,_120549,inform(_120555)):-true.
+tell(_112047,_112049,inform(_112055)):-true.
 
-meta(_120519,_120519,_120523):-nonvar(_120519),!.
+meta(_112019,_112019,_112023):-nonvar(_112019),!.

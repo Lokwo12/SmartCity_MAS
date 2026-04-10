@@ -1,5 +1,4 @@
-:- dynamic bin_level/1, bin_state/1, hb_counter/1, started/0, last_reset_req/1.
-:- dynamic last_monitor_ts/1.
+:- dynamic bin_level/1, bin_state/1, hb_counter/1, started/0, last_reset_req/1, last_monitor_ts/1.
 
 bin_level(0).
 max_capacity(100).
@@ -9,11 +8,26 @@ shared_token(city_token_2026).
 deltaT(2).
 monitor_interval_ms(1000).
 
-short_bin_id(Bin,Short) :-
-    atom_concat(smart_bin,N,Bin),
+send_level_log_traceA(BinId) :-
+    messageA(logger, send_message(log(info,level_update,BinId),BinId), BinId),
     !,
-    atom_concat(sb,N,Short).
-short_bin_id(Bin,Bin).
+    format('[SMART_BIN ~w] SEND_OK logger level_update~n',[BinId]).
+send_level_log_traceA(BinId) :-
+    format('[SMART_BIN ~w] SEND_FAIL logger level_update~n',[BinId]).
+
+send_full_traceA(BinId,Token) :-
+    messageA(control_center, send_message(bin_full(BinId,Token),BinId), BinId),
+    !,
+    format('[SMART_BIN ~w] SEND_OK control_center bin_full~n',[BinId]).
+send_full_traceA(BinId,_Token) :-
+    format('[SMART_BIN ~w] SEND_FAIL control_center bin_full~n',[BinId]).
+
+send_bin_full_log_traceA(BinId) :-
+    messageA(logger, send_message(log(info,bin_full,BinId),BinId), BinId),
+    !,
+    format('[SMART_BIN ~w] SEND_OK logger bin_full~n',[BinId]).
+send_bin_full_log_traceA(BinId) :-
+    format('[SMART_BIN ~w] SEND_FAIL logger bin_full~n',[BinId]).
 
 startI :>
     retractall(started),
@@ -45,23 +59,23 @@ monitorI(dummy) :>
     Now - Last >= Interval,
     retract(last_monitor_ts(Last)),
     assert(last_monitor_ts(Now)),
-    monitor_tickA.
+    evi(monitor_tick).
 
-monitor_tickA :-
+monitor_tickI :>
     hb_counter(C),
     C > 1,
     C1 is C - 1,
     retract(hb_counter(C)),
     assert(hb_counter(C1)).
 
-monitor_tickA :-
+monitor_tickI :>
     hb_counter(1),
     deltaT(D),
     retract(hb_counter(1)),
     assert(hb_counter(D)),
-    tickI.
+    evi(tick).
 
-monitor_tickA :- true.
+monitor_tickI :> true.
 
 tickI :>
     bin_state(waiting),
@@ -73,9 +87,9 @@ tickI :>
 
 maybe_fillI :>
     bin_state(idle),
-    increase_levelA.
+    evi(increase_level).
 
-increase_levelA :-
+increase_levelI :>
     bin_level(L),
     max_capacity(M),
     L < M,
@@ -85,15 +99,8 @@ increase_levelA :-
     assert(bin_level(NL)),
     agent(BinId),
     format('[SMART_BIN ~w] LEVEL=~w%~n',[BinId,NL]),
-    messageA(logger, send_message(log(info,level_update,BinId),BinId), BinId),
-    post_fillA(NL,M).
-
-post_fillA(NL,M) :-
-    NL >= M,
-    full_triggerI.
-
-post_fillA(NL,M) :-
-    NL < M.
+        send_level_log_traceA(BinId),
+    ( NL >= M -> evi(full_trigger) ; true ).
 
 full_triggerI :>
     bin_state(idle),
@@ -102,65 +109,70 @@ full_triggerI :>
     agent(BinId),
     format('[SMART_BIN ~w] FULL -> notify control_center~n',[BinId]),
     shared_token(Token),
-    messageA(control_center, send_message(bin_full(BinId,Token),BinId), BinId),
-    messageA(logger, send_message(log(info,bin_full,BinId),BinId), BinId).
+        send_full_traceA(BinId,Token),
+        send_bin_full_log_traceA(BinId).
 
-reset_binE :>
-    apply_reset_nowA.
+reset_binI :>
+    evi(apply_reset_now).
 
-apply_reset_nowA :-
+apply_reset_nowI :>
     retractall(bin_level(_)), assert(bin_level(0)),
     retractall(bin_state(_)), assert(bin_state(idle)),
     agent(BinId),
     format('[SMART_BIN ~w] RESET -> level=0%~n',[BinId]),
     messageA(logger, send_message(log(info,bin_reset,BinId),BinId), BinId).
 
-retry_collectionE :>
+retry_collectionI :>
     agent(BinId),
     shared_token(Token),
     messageA(control_center, send_message(bin_full(BinId,Token),BinId), BinId).
 
-send_message(bin_full(Bin,Token),_From) :-
+send_message(send_message(Msg,_),From) :-
+    !,
+    send_message(Msg,From).
+
+send_message(inform(Msg,_),From) :-
+    !,
+    send_message(Msg,From).
+
+send_message(Msg,From) :-
+    evi(bin_in(Msg,From)).
+
+bin_inI(bin_full(Bin,Token),_From) :>
     shared_token(Token),
-    fire_event(bin_full(Bin)).
+    evi(bin_full(Bin)).
 
-send_message(reset_bin,_From) :-
-    fire_event(reset_bin).
+bin_inI(reset_bin,_From) :>
+    evi(reset_bin).
 
-send_message(reset_bin(Bin,ReqId,Token),control_center) :-
+bin_inI(reset_bin(Bin,ReqId,Token),control_center) :>
     shared_token(Token),
     agent(Bin),
     last_reset_req(ReqId),
     messageA(control_center, send_message(reset_ack(Bin,ReqId,Token),Bin), Bin).
 
-send_message(reset_bin(Bin,ReqId,Token),control_center) :-
+bin_inI(reset_bin(Bin,ReqId,Token),control_center) :>
     shared_token(Token),
     agent(Bin),
     \+ last_reset_req(ReqId),
     assert(last_reset_req(ReqId)),
-    apply_reset_nowA,
+    evi(apply_reset_now),
     messageA(control_center, send_message(reset_ack(Bin,ReqId,Token),Bin), Bin).
 
-send_message(retry_collection,_From) :-
-    fire_event(retry_collection).
+bin_inI(retry_collection,_From) :>
+    evi(retry_collection).
 
-send_message(retry_collection(Bin,ReqId,Token),control_center) :-
+bin_inI(retry_collection(Bin,ReqId,Token),control_center) :>
     shared_token(Token),
     agent(Bin),
     format('[SMART_BIN ~w] RETRY requested for request=~w~n',[Bin,ReqId]),
-    fire_event(retry_collection).
+    evi(retry_collection).
 
-send_message(inform(reset_bin,_),_From) :-
-    fire_event(reset_bin).
+bin_inI(inform(reset_bin,_),_From) :>
+    evi(reset_bin).
 
-send_message(inform(retry_collection,_),_From) :-
-    fire_event(retry_collection).
-
-fire_event(E) :-
-    ( catch(call(eve(E)),_,fail)
-    ; catch(call(evi(E)),_,fail)
-    ), !.
-fire_event(_).
+bin_inI(inform(retry_collection,_),_From) :>
+    evi(retry_collection).
 
 monitor(dummy) :-
     evi(monitor(dummy)).

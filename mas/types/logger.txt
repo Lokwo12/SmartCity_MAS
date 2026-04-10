@@ -1,7 +1,15 @@
-:- dynamic log_store/4, started/0.
-:- dynamic recent_log/2.
+:- dynamic log_store/4, started/0, recent_log/2.
 
 dedup_window_ms(1200).
+
+log_printI(Level,Sender,Msg) :>
+    statistics(walltime,[T,_]),
+    ( Level = info -> Lvl = 'INFO'
+    ; Level = warn -> Lvl = 'WARN'
+    ; Level = error -> Lvl = 'ERROR'
+    ; Lvl = Level
+    ),
+    format('[logger +~wms] ~w src=~w | ~w~n',[T,Lvl,Sender,Msg]).
 
 startI :>
     retractall(started),
@@ -9,78 +17,57 @@ startI :>
     retractall(log_store(_,_,_,_)),
     retractall(recent_log(_,_)).
 
-should_printA(Key) :-
+should_printI(Key,_Level,_Sender,_Msg) :>
     statistics(walltime,[Now,_]),
     dedup_window_ms(W),
     recent_log(Key,Prev),
     Now - Prev < W,
     !,
-    false.
+    true.
 
-should_printA(Key) :-
+should_printI(Key,Level,Sender,Msg) :>
     statistics(walltime,[Now,_]),
     retractall(recent_log(Key,_)),
     assert(recent_log(Key,Now)),
-    true.
+    evi(log_print(Level,Sender,Msg)).
 
-logE(log(Level,Event,Sender)) :>
+logI(log(Level,Event,Sender)) :>
     statistics(walltime, [T,_]),
     assert(log_store(T,Sender,Event,Level)),
-    should_printA(k(Level,Sender,Event)),
-    !,
-    write('[LOG-'), write(Level), write('] '),
-    write(T), write(' ['),
-    write(Sender), write('] -> '),
-    write(Event), nl.
+    evi(should_print(k(Level,Sender,Event),Level,Sender,Event)).
 
-logE(log(Level,Event,Sender)) :>
-    statistics(walltime, [T,_]),
-    assert(log_store(T,Sender,Event,Level)),
-    true.
-
-logE(log(Level,event(Name,req(ReqId),bin(Bin),truck(Truck),note(Note)),Sender)) :>
+logI(log(Level,event(Name,req(ReqId),bin(Bin),truck(Truck),note(Note)),Sender)) :>
     statistics(walltime, [T,_]),
     assert(log_store(T,Sender,event(Name,req(ReqId),bin(Bin),truck(Truck),note(Note)),Level)),
-    should_printA(k(Level,Sender,event(Name,ReqId,Bin,Truck,Note))),
+    ( atom_concat(smart_bin,N,Bin) -> atom_concat(smartbin,N,Bp) ; Bp = Bin ),
+    format(atom(Msg),'~w bin=~w truck=~w note=~w',[Name,Bp,Truck,Note]),
+    evi(should_print(k(Level,Sender,event(Name,ReqId,Bin,Truck,Note)),Level,Sender,Msg)).
+
+logI(log(error,Event,Sender)) :>
+    evi(should_print(k(error,Sender,Event),error,Sender,Event)).
+
+send_message(send_message(Msg,_),From) :-
     !,
-    write('[LOG-'), write(Level), write('] '),
-    write(T), write(' ['), write(Sender), write('] '),
-    write(Name), write(' req='), write(ReqId),
-    write(' bin='), write(Bin),
-    write(' truck='), write(Truck),
-    write(' note='), write(Note), nl.
+    send_message(Msg,From).
 
-logE(log(Level,event(Name,req(ReqId),bin(Bin),truck(Truck),note(Note)),Sender)) :>
-    statistics(walltime, [T,_]),
-    assert(log_store(T,Sender,event(Name,req(ReqId),bin(Bin),truck(Truck),note(Note)),Level)),
-    true.
-
-logE(log(error,Event,Sender)) :>
-    should_printA(k(error,Sender,Event)),
+send_message(inform(Msg,_),From) :-
     !,
-    write('[ALERT] '), write(Sender),
-    write(' -> '), write(Event), nl.
+    send_message(Msg,From).
 
-logE(log(error,_Event,_Sender)) :>
-    true.
+send_message(Msg,From) :-
+    evi(log_in(Msg,From)).
 
-send_message(inform(log(Level,Event,Sender),_),_From) :-
-    fire_event(log(log(Level,Event,Sender))).
+log_inI(inform(log(Level,Event,Sender),_),_From) :>
+    evi(log(log(Level,Event,Sender))).
 
-send_message(log(Level,Event,Sender),_From) :-
-    fire_event(log(log(Level,Event,Sender))).
+log_inI(log(Level,Event,Sender),_From) :>
+    evi(log(log(Level,Event,Sender))).
 
-send_message(send_message(log(Level,Event,Sender),_),_From) :-
-    fire_event(log(log(Level,Event,Sender))).
+log_inI(send_message(log(Level,Event,Sender),_),_From) :>
+    evi(log(log(Level,Event,Sender))).
 
-send_message(send_message(inform(log(Level,Event,Sender),_),_),_From) :-
-    fire_event(log(log(Level,Event,Sender))).
-
-fire_event(E) :-
-    ( catch(call(eve(E)),_,fail)
-    ; catch(call(evi(E)),_,fail)
-    ), !.
-fire_event(_).
+log_inI(send_message(inform(log(Level,Event,Sender),_),_),_From) :>
+    evi(log(log(Level,Event,Sender))).
 
 monitorI(dummy) :>
     started.
